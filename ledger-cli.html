@@ -174,7 +174,7 @@
 <li><a class="" href="guld-git-host-gitlab.html">guld git host gitlab</a></li>
 <li><a class="" href="guld-git-host.html">guld git host</a></li>
 <li><a class="" href="guld-git-path-cli.html">guld git path cli</a></li>
-<li><a class="active" href="guld-git-path.html">guld git path</a></li>
+<li><a class="" href="guld-git-path.html">guld git path</a></li>
 <li><a class="" href="guld-git-remote-cli.html">guld git remote cli</a></li>
 <li><a class="" href="guld-git-remote.html">guld git remote</a></li>
 <li><a class="" href="guld-git.html">guld git</a></li>
@@ -195,7 +195,7 @@
 <li><a class="" href="keyring-gpg.html">keyring gpg</a></li>
 <li><a class="" href="keyring-interface.html">keyring interface</a></li>
 <li><a class="" href="keyring-pgp.html">keyring pgp</a></li>
-<li><a class="" href="ledger-cli.html">ledger cli</a></li>
+<li><a class="active" href="ledger-cli.html">ledger cli</a></li>
 </ul>
     </div>
     <header class="header d-print-none">
@@ -250,7 +250,7 @@
 <li><a class="" href="guld-git-host-gitlab.html">guld git host gitlab</a></li>
 <li><a class="" href="guld-git-host.html">guld git host</a></li>
 <li><a class="" href="guld-git-path-cli.html">guld git path cli</a></li>
-<li><a class="active" href="guld-git-path.html">guld git path</a></li>
+<li><a class="" href="guld-git-path.html">guld git path</a></li>
 <li><a class="" href="guld-git-remote-cli.html">guld git remote cli</a></li>
 <li><a class="" href="guld-git-remote.html">guld git remote</a></li>
 <li><a class="" href="guld-git.html">guld git</a></li>
@@ -271,26 +271,134 @@
 <li><a class="" href="keyring-gpg.html">keyring gpg</a></li>
 <li><a class="" href="keyring-interface.html">keyring interface</a></li>
 <li><a class="" href="keyring-pgp.html">keyring pgp</a></li>
-<li><a class="" href="ledger-cli.html">ledger cli</a></li>
+<li><a class="active" href="ledger-cli.html">ledger cli</a></li>
 </ul>
                 </div>
             </div>
 
             <div class="col-12 col-md-9">
-                <h1>guld-git-path</h1>
-<p>Guld tool for getting the git directory of a path, or converting local paths into git-friendly repo names.</p>
-<h3>Example Output</h3>
-<pre><code>/home/isysd/tech/js/node_modules/guld-git-path/.git
+                <h1>ledger-cli</h1>
+<p>API for the Ledger command-line interface (<a href="http://ledger-cli.org/">ledger-cli.org</a>).</p>
+<blockquote>
+<p>Ledger is a powerful, double-entry accounting system that is accessed from the UNIX command-line.</p>
+</blockquote>
+<p>MIT License</p>
+<p><a href="https://travis-ci.org/slashdotdash/node-ledger"><img src="https://travis-ci.org/slashdotdash/node-ledger.svg?branch=master" alt="Build Status"></a></p>
+<h2>Dependencies</h2>
+<ul>
+<li><a href="http://ledger-cli.org/">Ledger 3</a></li>
+<li><a href="nodejs.org">Node.js</a> (server)</li>
+<li><a href="https://github.com/guldcoin/ledger-native">ledger native chrome</a> (browser)</li>
+</ul>
+<h3>Installing Ledger</h3>
+<p>The simplest way to install Ledger 3 for macOS users is through <a href="http://mxcl.github.com/homebrew/">Homebrew</a>.</p>
+<pre><code>brew install ledger --HEAD
 </code></pre>
-<h3>Install</h3>
-<pre><code>npm i -g guld-git-path
+<p>The <code>--HEAD</code> option is required to install version 3.x.</p>
+<h2>Usage</h2>
+<p>Install <code>ledger-cli-browser</code> and its dependencies with npm.</p>
+<pre><code>npm install ledger-cli-browser
 </code></pre>
-<h3>Usage</h3>
-<pre><code>// async
-getGitDir().then(console.log)
+<p>Then require the library and use the exported Ledger class to <a href="#available-commands">execute commands</a>.</p>
+<pre><code class="language-js">var Ledger = require('ledger-cli-browser').Ledger;
 </code></pre>
-<h5>Node</h5>
-<pre><code>const { getGitDir, pathEscape } = require('guld-git-path')
+<p>You must provide the path to the Ledger journal file via the  <code>file</code> option</p>
+<pre><code class="language-js">var ledger = new Ledger({ file: 'path/to/ledger/journal/file.dat' });
+</code></pre>
+<h3>Available commands</h3>
+<p>There are five available Ledger commands.</p>
+<ul>
+<li><code>accounts</code> - Lists all accounts for postings.</li>
+<li><code>balance</code> - Reports the current balance of all accounts.</li>
+<li><code>print</code> - Prints out the full transactions, sorted by date, using the same format as they would appear in a Ledger data file.</li>
+<li><code>register</code> - Displays all the postings occurring in a single account.</li>
+<li><code>stats</code> - Retrieves statistics, like number of unique accounts.</li>
+<li><code>version</code> - Gets the currently installed Ledger version number.</li>
+</ul>
+<h3>Accounts</h3>
+<p>Lists all accounts for postings. It returns a readable object <code>stream</code>.</p>
+<pre><code class="language-js">ledger.accounts()
+  .on('data', function(account) {
+    // account is the name of an account (e.g. 'Assets:Current Account')
+  });
+</code></pre>
+<h3>Balance</h3>
+<p>The balance command reports the current balance of all accounts. It returns a <a href="https://github.com/isysd/ledger-types">ledger-types</a> Account.</p>
+<pre><code class="language-js">ledger.balance()
+  .on('data', function(entry) {
+    // JSON object for each entry
+    entry = {
+      { // a ledger-types.Account object
+        __bal: {value: 1,000.00, commodity: '£'} // a ledger-types Balance object
+        Assets: {
+          __bal: {value: 1,000.00, commodity: '£'}
+          Checking: {
+            __bal: {value: 1,000.00, commodity: '£'}
+          }
+        }
+      }
+    };
+  })
+  .once('end', function(){
+    // completed
+  })
+  .once('error', function(error) {
+    // error
+  });
+</code></pre>
+<h3>Print</h3>
+<p>The print command formats the full list of transactions, ordered by date, using the same format as they would appear in a Ledger data file. It returns a readable stream.</p>
+<pre><code class="language-js">var fs = require('fs'),
+    out = fs.createWriteStream('output.dat');
+
+ledger.print().pipe(out);
+</code></pre>
+<h3>Register</h3>
+<p>The register command displays all the postings occurring in a single account. It returns a readable object <code>stream</code>.</p>
+<pre><code class="language-js">ledger.register()
+  .on('data', function(entry) {
+    // JSON object for each entry
+    entry = {
+      date: new Date(2014, 1, 1),
+      effectiveDate: new Date(2014, 1, 1),
+      cleared: true,
+      pending: true,
+      payee: 'Salary',
+      postings: [
+        { // a ledger-types.Account object
+          __bal: {value: 1,000.00, commodity: '£'} // a ledger-types Balance object
+          Assets: {
+            __bal: {value: 1,000.00, commodity: '£'}
+            Checking: {
+              __bal: {value: 1,000.00, commodity: '£'}
+            }
+          }
+        }
+      ]
+    };
+  })
+  .once('end', function(){
+    // completed
+  })
+  .once('error', function(error) {
+    // error
+  });
+</code></pre>
+<h3>Stats</h3>
+<p>The stats command is used to retrieve statistics about the Ledger data file. It requires a Node style callback function that is called with either an error or the stats object.</p>
+<pre><code class="language-js">ledger.stats(function(err, stats) {
+  if (err) { return console.error(err); }
+
+  // stats is a map (e.g. stats['Unique accounts'] = 13)
+});
+</code></pre>
+<h3>Version</h3>
+<p>The version command is used to get the Ledger binary version. It requires a Node style callback function that is called with either an error or the version number as a string.</p>
+<pre><code class="language-js">ledger.version(function(err, version) {
+  if (err) { return console.error(err); }
+
+  // version is a string (e.g. '3.0.0-20130529')
+});
 </code></pre>
 
             </div>

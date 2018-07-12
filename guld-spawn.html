@@ -154,6 +154,7 @@
             <img src="logo.svg" class="img-responsive" alt="Guld">
         </span>
         <ul>
+<li><a class="" href="flexfs.html">flexfs</a></li>
 <li><a class="" href="gpg-conf.html">gpg conf</a></li>
 <li><a class="" href="guld-cli.html">guld cli</a></li>
 <li><a class="" href="guld-env-cli.html">guld env cli</a></li>
@@ -194,6 +195,7 @@
 <li><a class="" href="keyring-gpg.html">keyring gpg</a></li>
 <li><a class="" href="keyring-interface.html">keyring interface</a></li>
 <li><a class="" href="keyring-pgp.html">keyring pgp</a></li>
+<li><a class="" href="ledger-cli.html">ledger cli</a></li>
 </ul>
     </div>
     <header class="header d-print-none">
@@ -228,6 +230,7 @@
             <div class="col-6 col-md-3 sidebar-offcanvas d-print-none" id="sidebar">
                 <div class="list-group">
                     <ul>
+<li><a class="" href="flexfs.html">flexfs</a></li>
 <li><a class="" href="gpg-conf.html">gpg conf</a></li>
 <li><a class="" href="guld-cli.html">guld cli</a></li>
 <li><a class="" href="guld-env-cli.html">guld env cli</a></li>
@@ -268,13 +271,24 @@
 <li><a class="" href="keyring-gpg.html">keyring gpg</a></li>
 <li><a class="" href="keyring-interface.html">keyring interface</a></li>
 <li><a class="" href="keyring-pgp.html">keyring pgp</a></li>
+<li><a class="" href="ledger-cli.html">ledger cli</a></li>
 </ul>
                 </div>
             </div>
 
             <div class="col-12 col-md-9">
                 <h1>guld-spawn</h1>
-<p>Promisified process spawner with stdin support and optional stderr redirect to stdout.</p>
+<p>Promisified process spawner for node or chrome native messenger. Chrome native messenger must be installed and called from a paired chrome extension.</p>
+<p>With stdin support and optional stderr redirect to stdout.</p>
+<h3>Usage</h3>
+<pre><code class="language-JS">const {getSpawn, nodeSpawn, chromeSpawn} = require('guld-spawn')
+
+// either nodeSpawn or chromeSpawn depending on environment
+var spawn = getSpawn()
+
+// note: this is not an async function, for brevity
+var stdout = await spawn('ledger', '', ['.f', 'ledger.dat', 'bal'])
+</code></pre>
 
             </div>
         </div>
