@@ -162,7 +162,7 @@
 <li><a class="" href="guld-fs-cli.html">guld fs cli</a></li>
 <li><a class="" href="guld-fs-foreach-cli.html">guld fs foreach cli</a></li>
 <li><a class="" href="guld-fs-foreach.html">guld fs foreach</a></li>
-<li><a class="active" href="guld-fs-str-replace-cli.html">guld fs str replace cli</a></li>
+<li><a class="" href="guld-fs-str-replace-cli.html">guld fs str replace cli</a></li>
 <li><a class="" href="guld-fs-str-replace.html">guld fs str replace</a></li>
 <li><a class="" href="guld-fs.html">guld fs</a></li>
 <li><a class="" href="guld-git-cli.html">guld git cli</a></li>
@@ -195,7 +195,7 @@
 <li><a class="" href="keyring-gpg.html">keyring gpg</a></li>
 <li><a class="" href="keyring-interface.html">keyring interface</a></li>
 <li><a class="" href="keyring-pgp.html">keyring pgp</a></li>
-<li><a class="" href="keyvaluedb.html">keyvaluedb</a></li>
+<li><a class="active" href="keyvaluedb.html">keyvaluedb</a></li>
 <li><a class="" href="ledger-cli.html">ledger cli</a></li>
 <li><a class="" href="ledger-types.html">ledger types</a></li>
 </ul>
@@ -240,7 +240,7 @@
 <li><a class="" href="guld-fs-cli.html">guld fs cli</a></li>
 <li><a class="" href="guld-fs-foreach-cli.html">guld fs foreach cli</a></li>
 <li><a class="" href="guld-fs-foreach.html">guld fs foreach</a></li>
-<li><a class="active" href="guld-fs-str-replace-cli.html">guld fs str replace cli</a></li>
+<li><a class="" href="guld-fs-str-replace-cli.html">guld fs str replace cli</a></li>
 <li><a class="" href="guld-fs-str-replace.html">guld fs str replace</a></li>
 <li><a class="" href="guld-fs.html">guld fs</a></li>
 <li><a class="" href="guld-git-cli.html">guld git cli</a></li>
@@ -273,7 +273,7 @@
 <li><a class="" href="keyring-gpg.html">keyring gpg</a></li>
 <li><a class="" href="keyring-interface.html">keyring interface</a></li>
 <li><a class="" href="keyring-pgp.html">keyring pgp</a></li>
-<li><a class="" href="keyvaluedb.html">keyvaluedb</a></li>
+<li><a class="active" href="keyvaluedb.html">keyvaluedb</a></li>
 <li><a class="" href="ledger-cli.html">ledger cli</a></li>
 <li><a class="" href="ledger-types.html">ledger types</a></li>
 </ul>
@@ -281,21 +281,31 @@
             </div>
 
             <div class="col-12 col-md-9">
-                <h1>guld-fs-str-replace-cli</h1>
-<p>Replace old-string with new-string for all files in path.</p>
-<h3>Install</h3>
-<pre><code>npm i -g guld-fs-str-replace-cli
-</code></pre>
+                <h1>keyvaluedb</h1>
+<p><a href="https://www.npmjs.com/package/keyvaluedb"><img src="https://img.shields.io/npm/v/keyvaluedb.svg" alt="npm"></a> <a href="https://travis-ci.org/isysd/keyvaluedb"><img src="https://travis-ci.org/isysd/keyvaluedb.svg?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/github/isysd/keyvaluedb?branch=master"><img src="https://coveralls.io/repos/github/isysd/keyvaluedb/badge.svg?branch=master" alt="Coverage Status"></a></p>
+<p>Middleware for key value data stores. Supports a temporary memory database, and persistent Chrome Storage.</p>
+<h3>Installation</h3>
+<p>Please use npm to install.</p>
+<p><code>npm i keyvaluedb</code></p>
+<h5>Browser</h5>
+<p>To use in the browser, please use browserify or webpack to include and build keyvaluedb. No standalone browser library is currently implemented, but can be if requested.</p>
 <h3>Usage</h3>
-<h5>CLI</h5>
-<pre><code>  Usage: guld-fs-str-replace &lt;path&gt; &lt;old-str&gt; &lt;new-str&gt; [flags...]
-
-  Replace old-string with new-string for all files in path.
-
-  Options:
-
-    -V, --version  output the version number
-    -h, --help     output usage information
+<p>Either a specific database class can be initialized, or the <code>defaultDB</code> function can be used to attempt to find a DB that works in your runtime environment.</p>
+<pre><code>const { defaultDB, memoryDB, chromeStorageDB } = require('keyvaluedb')
+const db = defaultDB()
+await db.set('key', 'value')
+await db.get('key') // value
+await db.setMany({1: 1, 2: 2})
+await db.getMany([1, 2]) // {1: 1, 2: 2}
+</code></pre>
+<p>Then you are free to make use of the promised based <code>get</code>, <code>set</code>, <code>setMany</code> and <code>getMany</code> functions. See tests for examples.</p>
+<h5>Mixin</h5>
+<p>To use as an es6 class mixin, first use <a href="https://github.com/isysd/object-to-class">object-to-class</a>.</p>
+<pre><code>const o2c = require('object-to-class')
+const MemoryDB = o2c(memoryDB, 'MemoryDB')
+class MyDB extends MemoryDB {}
+let mydb = new MyDB()
+mydb instanceof MemoryDB // true
 </code></pre>
 
             </div>
