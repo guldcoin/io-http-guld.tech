@@ -30,22 +30,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-    <header class="header d-print-none">
-        <!-- Navigation -->
-        <nav class="navbar main-menu navbar-expand-sm navbar-light">
-            <h1 id="logo">
-                <a class="navbar-brand page-scroll" href="/">
-                    <span class="logo">
-		               <img src="/img/logo.svg" class="img-responsive" alt="Guld">
-		           </span>
-                </a>
-            </h1>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		   </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="70">
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light">
+        <a class="navbar-brand" href="#page-top">
+        <img id="logo" src="img/logo.svg" class="img-responsive" alt="Guld">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	   </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
 <li class="nav-item"><a class="nav-link" href="../index.html">index</a></li>
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">cli</a>
@@ -112,11 +106,8 @@
 <a class="dropdown-item" href="../papers/guld_name_service.html">guld name service</a>
 </div></li>
 </ul>
-            </div>
-            <!-- /.container -->
-        </nav>
-        <!-- .nav -->
-    </header>
+        </div>
+    </nav>
 
     <div class="container-fluid">
 
@@ -220,7 +211,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
     <script>
         // Open all external links in new window 
-        		$('a').filter(function () {return this.hostname != window.location.hostname;}).attr('target', '_blank');
+                        $('a').filter(function () {return this.hostname != window.location.hostname;}).attr('target', '_blank');
     </script>
 </body>
 
