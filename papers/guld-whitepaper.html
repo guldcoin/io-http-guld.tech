@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guld Technical Documents</title>
+
+    <meta property="og:url" content="https://guld.tech" />
+    <meta property="og:image" content="http://guld.tech/img/og.jpg" />
+    <meta property="og:title" content="Guld Technical Documents" />
+    <meta property="og:description" content="Technical documentation for guld" />
+
+    <!-- favicon -->
+    <link rel="icon" href="/img/favicon.png">
+    <meta name="theme-color" content="#000000">
+
+    <!-- web-fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- style css -->
+    <link href="/css/tech.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="header d-print-none">
+        <!-- Navigation -->
+        <nav class="navbar main-menu navbar-expand-sm navbar-light">
+            <h1 id="logo">
+                <a class="navbar-brand page-scroll" href="/">
+                    <span class="logo">
+		               <img src="/img/logo.svg" class="img-responsive" alt="Guld">
+		           </span>
+                </a>
+            </h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		   </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+<li class="nav-item"><a class="nav-link" href="../index.html">index</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">cli</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="../cli/guld-cli.html">guld cli</a>
+<a class="dropdown-item" href="../cli/guld-env-cli.html">guld env cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-cli.html">guld fs cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-foreach-cli.html">guld fs foreach cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-str-replace-cli.html">guld fs str replace cli</a>
+<a class="dropdown-item" href="../cli/guld-git-cli.html">guld git cli</a>
+<a class="dropdown-item" href="../cli/guld-git-config-cli.html">guld git config cli</a>
+<a class="dropdown-item" href="../cli/guld-git-host-cli.html">guld git host cli</a>
+<a class="dropdown-item" href="../cli/guld-git-path-cli.html">guld git path cli</a>
+<a class="dropdown-item" href="../cli/guld-git-remote-cli.html">guld git remote cli</a>
+<a class="dropdown-item" href="../cli/guld-keys-cli.html">guld keys cli</a>
+<a class="dropdown-item" href="../cli/guld-ledger-cli.html">guld ledger cli</a>
+<a class="dropdown-item" href="../cli/guld-mail-cli.html">guld mail cli</a>
+<a class="dropdown-item" href="../cli/guld-pass-cli.html">guld pass cli</a>
+<a class="dropdown-item" href="../cli/guld-random-cli.html">guld random cli</a>
+<a class="dropdown-item" href="../cli/guld-sdk-cli.html">guld sdk cli</a>
+<a class="dropdown-item" href="../cli/guld-user-cli.html">guld user cli</a>
+</div></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">lib</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="../lib/flexfs.html">flexfs</a>
+<a class="dropdown-item" href="../lib/gpg-conf.html">gpg conf</a>
+<a class="dropdown-item" href="../lib/guld-docs.html">guld docs</a>
+<a class="dropdown-item" href="../lib/guld-env.html">guld env</a>
+<a class="dropdown-item" href="../lib/guld-fs-foreach.html">guld fs foreach</a>
+<a class="dropdown-item" href="../lib/guld-fs-str-replace.html">guld fs str replace</a>
+<a class="dropdown-item" href="../lib/guld-fs.html">guld fs</a>
+<a class="dropdown-item" href="../lib/guld-git-config.html">guld git config</a>
+<a class="dropdown-item" href="../lib/guld-git-host-bitbucket.html">guld git host bitbucket</a>
+<a class="dropdown-item" href="../lib/guld-git-host-github.html">guld git host github</a>
+<a class="dropdown-item" href="../lib/guld-git-host-gitlab.html">guld git host gitlab</a>
+<a class="dropdown-item" href="../lib/guld-git-host.html">guld git host</a>
+<a class="dropdown-item" href="../lib/guld-git-path.html">guld git path</a>
+<a class="dropdown-item" href="../lib/guld-git-remote.html">guld git remote</a>
+<a class="dropdown-item" href="../lib/guld-git.html">guld git</a>
+<a class="dropdown-item" href="../lib/guld-keys-bitcoin.html">guld keys bitcoin</a>
+<a class="dropdown-item" href="../lib/guld-keys.html">guld keys</a>
+<a class="dropdown-item" href="../lib/guld-ledger.html">guld ledger</a>
+<a class="dropdown-item" href="../lib/guld-mail.html">guld mail</a>
+<a class="dropdown-item" href="../lib/guld-pass.html">guld pass</a>
+<a class="dropdown-item" href="../lib/guld-random.html">guld random</a>
+<a class="dropdown-item" href="../lib/guld-spawn.html">guld spawn</a>
+<a class="dropdown-item" href="../lib/guld-user.html">guld user</a>
+<a class="dropdown-item" href="../lib/guld-zip-fs.html">guld zip fs</a>
+<a class="dropdown-item" href="../lib/keyring-gpg.html">keyring gpg</a>
+<a class="dropdown-item" href="../lib/keyring-interface.html">keyring interface</a>
+<a class="dropdown-item" href="../lib/keyvaluedb.html">keyvaluedb</a>
+<a class="dropdown-item" href="../lib/ledger-types.html">ledger types</a>
+</div></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">papers</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="guld-dapp-architecture.html">guld dapp architecture</a>
+<a class="dropdown-item" href="guld-whitepaper.html">guld whitepaper</a>
+<a class="dropdown-item" href="guldFS_Specification.html">guldFS Specification</a>
+<a class="dropdown-item" href="guldOS_Specification.html">guldOS Specification</a>
+<a class="dropdown-item" href="guld_email.html">guld email</a>
+<a class="dropdown-item" href="guld_ledger.html">guld ledger</a>
+<a class="dropdown-item" href="guld_name_service.html">guld name service</a>
+</div></li>
+</ul>
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- .nav -->
+    </header>
+
+    <div class="container-fluid">
+
+        <section id="content" class="container">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div class="col-12">
+                    <div class="room">
+                        <h1>Guld: Universal Protocol for Relative Consensus</h1>
+<p>Author: <a href="gap://life/isyd">Ira Miller</a> &lt;<a href="mailto:public@iramiller.com">public@iramiller.com</a>&gt; <a href="https://iramiller.com">iramiller.com</a></p>
+<h5>Abstract</h5>
+<p>A polytree with signed, typed, symmetrical nodes can be used to represent, record, compare, and perform operations on individual and group perspectives on any topic describable in a digitized record. This <code>blocktree</code> would then represent a virtual universe for the participants, including natural causality and one-directional “time”. The participants would be able to make assertions about each other’s perspectives, building proofs of consensus or dissent. Using existing technologies like git, pgp, and ssh such a polytree can be constructed in a timely and accessible manner, while maintaining scalability and decentralization at the protocol level.</p>
+<h3>Introduction</h3>
+<p>Since Bitcoin(1) introduced the blockchain concept in 2009, hundreds of experimental technologies have been developed to help users achieve consensus on one topic or another. The majority of these have been organized around the model of a central, unbranching trunk of absolute truth, i.e. a blockchain. To “fork” a blockchain, is perceived as negative, because it breaks the implicit or explicit contract of absolute truth that formed the chain.</p>
+<p>Perhaps due to their unforkability, blockchains have proved inflexible at managing conflict and change. Though Turing complete contract systems have been created(2), these have so far been insufficient to address the problem of the Firm(3), let alone the Government(4). This restricts blockchains to the realm of prices and payment systems, and outside of the firm.(5)</p>
+<p>A relativistic blocktree of perspectives would be a much more flexible and powerful platform for propagation of information in contracts, communities, firms, and governments. Such trees operate on abstract beliefs and observations to create causal relationships between nodes, and allow efficient proofs.(6)</p>
+<h3>Individual Observers</h3>
+<p>“I think, therefore I am”(7) is a beautiful and strong proof, but it only works for the observer himself. A modernization using asymmetric cryptography would be “I sign a unique perspective using this key, therefore I am.”</p>
+<p>To show the distinction, lets consider the case of Rene Descartes, the author of the original quote. Was he real, or is he a figment of your/my dreams? Even he would admit that we have insufficient evidence to prove the former. But consider, what if he had generated an asymmetrical keypair using an algorithm such as RSA, not invented until 1983.(8) Suppose he had somehow signed his book, publishing it with his public key in an appendix. Would he not then be able to provide a signature upon request proving that he is the same person that observed the original proof? Suppose he had somehow passed the private key down through the generations of his family to today, without it’s secret being revealed publicly. Would not his heir be able to provide proof to us, even today of the relationship between the key and the work? This inherited key perspective would not be ideal, but it would be sufficient proof even for M. Descartes to accept.</p>
+<p>Is the key alone sufficient proof to accept a new <code>life</code>? Surely not, because the key is an inanimate math phenomenon that exists in nature. A thought which provably could not have come from yourself must, however, be evidence of some other thinker. Multiple thoughts signed by that same key indicate a strong pattern that the signer is the thinker. Daily use of the key in the pattern of the thinker’s life make it almost certain.</p>
+<p>So, let us define a <code>life</code> (in <code>blocktree</code> terminology) as an entity capable of generating an asymmetrical keypair, and using it to publish a unique perspective. This proof is still relative, but now it is relative to a second party, the observer of the thinker. This process can then build, by the thinker publishing their perspective on the original observer, each able to make provable assertions about the other’s perspective, and the state of their network.(5)</p>
+<h5>Proof of Labor (Observation)</h5>
+<ol>
+<li>Rene signs &amp; publishes unique thought A, along with public key RDKey</li>
+<li>Observer validates signature of RDKey.</li>
+<li>Observer decides on uniqueness of thought A as proof of a living perspective.</li>
+<li>If Observer accepts thought A as unique, Observer can safely infer that the signer Rene using key RDKey is also alive.</li>
+</ol>
+<h3>Perspectives (tree nodes)</h3>
+<p>The blocktree requires a data type for any observer’s perspective, which make up primary nodes in the polytree. In practice, a plain text data type like JSON should be used, but abstractly, the perspective can be thought of as a decision tree. That is, each node inside the perspective asks a boolean question.</p>
+<p>The simplest and smallest perspective would be Descartes’s “I think, therefore I am”, where his thought is his public key.</p>
+<table>
+<thead>
+<tr>
+<th>path</th>
+<th>question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>life</code></td>
+<td>Is the record a <code>life</code> as defined by PoL?</td>
+</tr>
+<tr>
+<td><code>life/Rene</code></td>
+<td>Is the record the signer known as <code>Rene</code>, who uses key <code>RDKey</code>?</td>
+</tr>
+<tr>
+<td><code>keys</code></td>
+<td>Is the record an ascii armored PGP public key?</td>
+</tr>
+<tr>
+<td><code>keys/RDKey</code></td>
+<td>Is the record the key known as RDKey?</td>
+</tr>
+</tbody>
+</table>
+<p>The entries are either the raw contents that answer the question, or a git submodule linking to said contents. In the case of category nodes, like <code>keys</code>, the raw contents may be a directory, which in git, is just a path to a hashable object.</p>
+<p><img src="/img/blocktree-descartes.jpg" alt="blocktree-descartes"></p>
+<p>The ‘life/Rene’ case is more complex. What is Rene? In the git tree, it is a submodule, referencing the HEAD commit of the parent perspective. More subtle, though, Rene is the pattern of observations that are always signed using <code>RDKey</code>. To help us recognize this, Rene keeps all of these observations in the agreed upon perspective taxonomy, at his dedicated namespace in the tree, <code>life/Rene</code>.</p>
+<p>Since observers recognize each other, the blocktree is symmetrical, and potentially contains an infinite number of perspective branches. Though observers can use different formats for their perspectives, this disrupts the functionality of the blocktree, as relationships only develop through provable consensus, i.e. symmetry. So Rene must use the conventional perspective taxonomy, or certainly miscommunicate.</p>
+<p>Assume there is another rational entity Baruch Spinoza, who performs a similar self-proof using BSKey. The two would not necessarily see each other at first, and would be in self-contained perspective loops. The perspectives would be symmetrical, and easily comparable, however, should any outside observer read them both.</p>
+<p><img src="/img/blocktree-spinoza.jpg" alt="blocktree-spinoza"></p>
+<h3>The Blocktree</h3>
+<p>The blocktree itself is a combination of many perspective nodes. In the guld software, each perspective node will be a git repository, and the links between perspective nodes are git submodules.(9) Since submodules are not the complete contents, but rather a SHA1 hash, this maintains both the privacy of the hashee and the disk space of the hasher.</p>
+<p>Baruch could read Rene’s theory, and observe that RDKey was still in active use. Baruch would therefore update his tree by referencing Rene, and RDKey in their respective places. This would yield a self-similar, predictable and organized tree. Baruch could make basic assertions about Rene’s perspective, such as “Rene believes he exists.” Rene would not necessarily accept any premise of Baruch’s, but would be able to prove “Baruch believes Rene exists”.</p>
+<p><img src="/img/blocktree-descartes-seen.jpg" alt="blocktree-descartes-seen"></p>
+<p>Next, let’s assume there is a two way communication between Rene and Baruch. Rene sees that Baruch has recognized his work, and reciprocates, also yielding identical hashes for <code>life</code>, and <code>keys</code>. The two have achieved consensus.</p>
+<p>The simplest state of consensus is a symmetric equilibrium of proven existence between two parties. That is, both parties have shared public keys, and proven to each other their sentience with a unique thought. In git practice, an additional step of merging trees may be necessary, but that’s procedural.</p>
+<p><img src="/img/blocktree-descartes-friend.jpg" alt="blocktree-descartes-friend"></p>
+<p>When in a state of absolute consensus, as shown above, this tree is one level of perspective nodes deep, but n rows wide, where n is the number of unique observers. In git terms, every submodule in the <code>life</code> directory would point back to the parent repository.</p>
+<p>When there is disagreement, each <code>life</code> node may represent one or more branch points. The topography of this branching creates a control surface to be manipulated. For instance, suppose the branching is on the topic of 3d shapes. Their trees would overlap in some areas, differ in the area of shapes, and each contain at least a reference to the other.</p>
+<p><img src="/img/blocktree-shapes-disagree.jpg" alt="blocktree-shapes-disagree"></p>
+<p>Though Rene does not himself recognize the <code>cube</code> as a shape, he would be able to reference it using Baruch’s definition, and vice versa for Baruch and the <code>cylinder</code>. Either could provably assert that the other believed in such a foreign thing, referencing the other’s definition.</p>
+<h3>Communities</h3>
+<p>Suppose that Rene and Baruch talk it out, and come to consensus on the subject of shapes. They’re so excited about finally reaching accord, that they decide to form a philosopher’s club based on the subject, <code>ClubPhil</code>.</p>
+<p>Suppose <code>ClubPhil</code> is based on a mutually exclusive charter that said “all members must always agree on the subject of shapes”. The members of <code>ClubPhil</code> agree to each keep a copy of the official perspective for the community, including any unanimously recognized shapes, keys, and lives aka members. This perspective will be named <code>ClubPhil</code>, and live in the <code>ClubPhil</code> branch of the community clone that each user has locally.</p>
+<p><img src="/img/blocktree-clubphil.jpg" alt="blocktree-clubphil"></p>
+<p>Each member of the community would be able to prove at any time the perspective of any other on any record, including the contractual shapes, and the charter. If any member was to recognize a foreign shape, for instance, the others would be able to prove breach of the <code>ClubPhil</code> charter.</p>
+<p>Then let <code>community</code> in the <code>blocktree</code> be defined as an agreement between mutually recognized <code>life</code>s to publish a combined perspective.</p>
+<h5>Co-signing aka Voting</h5>
+<p>How then would the <code>ClubPhil</code> community progress? What would happen if one day Rene discovered the <code>bevel</code>? Based on their charter, another argument, followed by a community fork or a unanimous update. A more sophisticated contract could be written with some effort, that would take into account the process of debate, creating a state machine for the community. Debates would take place on member branches, and only be merged into the community branch upon reaching a threshold of approval.</p>
+<p>Because the community’s state will be hashed into each user’s perspective at each event the user observes, each user creates a constantly affirmed feed of their perspective on the state of the community and all relevant records. Since each record is behind a <code>git</code> submodule, it only takes up the space of a hash. Furthermore, since <code>git</code> only tracks changes, only the changed references need be considered or stored in each commit block.</p>
+<p>Therefore, counting “votes” on a community issue is trivial. Simply run the “x believes y” proof for each member x on the topic y. If the pre-arranged community threshold (i.e. 50%, 100%) for merging has been met, every member knows to merge topic y into the community consensus branch.</p>
+<p>Different weights can be given to member votes within a community, or even special roles and responsibilities. Since the basics of counting and tracking states do not change, these decisions will be left up to community developers.</p>
+<h3>Finance</h3>
+<p>The typical blockchain functionality of sequential, trustless transactions can be achieved by filing a ledger in a community branch of the blocktree. The community can manage the state of the ledger, in the same way that <code>ClubPhil</code> manages the shapes set.</p>
+<p>While such a ledger could theoretically use any format, plain text is most user friendly, and efficient in the chosen file system of git. It is therefore recommended to use <code>ledger-cli</code> for all blocktree ledgers.(10)</p>
+<p>The <code>ledger-cli</code> format has very powerful unit control, including support completely custom commodity strings. Combined with the consensus a community can provide, this allows new digital tokens to be issued and controlled.</p>
+<pre><code>2017/06/7 ball4thegame
+  Assets:ball4thegame:Ambassador          1000 XGC
+  Equity:guld:Ambassador              -1000 XGC
+</code></pre>
+<h3>Network</h3>
+<p>Though the standard <code>git</code> software package ships with a server, and that server supports p2p <code>ssh</code> authentication, this is rarely made use of. In practice, users tend to use one of the popular hosting services, such as <a href="http://github.com">github</a>, <a href="http://bitbucket.org">bitbucket</a>,  <a href="http://gitlab.com">gitlab</a>, etc… One of these is more than sufficient for the average open source project, but not for a consensus network. Thankfully, git supports a multiple <code>remote</code> hosts for each repository, and the protocol strengthens the user’s signed ownership of the state, making each inter-changeable.</p>
+<pre><code class="language-bash">$ git remote -v
+isysd    git@guld.host:isysd/guld.git (fetch)
+isysd    git@guld.host:isysd/guld.git (push)
+isysd-github    git@github.com:isysd/guld.git (fetch)
+isysd-github    git@github.com:isysd/guld.git (push)
+isysd-bitbucket    git@bitbucket.org:isysd/guld.git (fetch)
+isysd-bitbucket    git@bitbucket.org:isysd/guld.git (push)
+cindy-zimmerman    git@guld.host:cindy-zimmerman/guld.git (fetch)
+cindy-zimmerman    git@guld.host:cindy-zimmerman/guld.git (push)
+</code></pre>
+<p>Because we recognize that <code>isysd</code> is a living person who uses a specific PGP key to publish to one or all of the <code>isysd*</code> mirrors shown, we can accept the most up to date with his signed commits. The hosts are not to be trusted. Logistically, checking all of these is inefficient, so users should establish P2P socket connections with their friends to send notifications about commits and hosts.</p>
+<p>Any mutually accepted users of the protocol could publish encrypted contact info for each other, including IP addresses for git hosts and live socket sessions. Ideally, each user on the network would host their own <code>git</code> servers, using software like gitolite(11) to manage permissions in repository, and publishing their IP address (selectively encrypted) all on the blocktree.</p>
+<p><strong>Example Gitolite configuration</strong></p>
+<pre><code>@users = u1 u2 u3
+
+repo foo/CREATOR/[a-z]..*
+    C   =   u1 u2 u3
+    RW+ =   CREATOR
+    RW  =   WRITERS
+    R   =   READERS
+</code></pre>
+<p>This would create a provable hosting service, where the host can demonstrate compliance with community access rules, and even put the configuration itself in the control of one or more signing users.</p>
+<p>Running <code>git</code> and <code>ssh</code> servers is an, as yet, under-assessed security risk to request of end users. Until there is are lots of data from experienced systems administrators, and the protocol has stabilized, end users should not be required to host their own repositories.</p>
+<p>Starting with professional, trustless hosting services, the guld network will evolve to proven hosts, finally to a completely p2p, self-hosted network.</p>
+<p>This evolution will separate guld more and more from traditional infrastructure like Dynamic Name Servers (DNS), gradually reshaping the internet on P2P terms, with P2P identities, governance, and finances built in.</p>
+<h3>Conclusion</h3>
+<p>The <code>blocktree</code> represents a rich, self-contained world, with causality and enforceable laws for it’s participants. By using relative proofs based on perspectives, relative truths and consensus can be reached, lost, and reachieved flexibly, in ways that blockchains are unable to replicate. This blocktree of relative truth, or truth good enough for a community, is superior to blockchains of absolute truth for human contracts, firms, and governments.</p>
+<h3>References</h3>
+<ul>
+<li>
+<p><a href="https://bitcoin.org/bitcoin.pdf">1</a> Satoshi Nakamoto “Bitcoin” (2009)</p>
+</li>
+<li>
+<p><a href="https://github.com/ethereum/wiki/wiki/White-Paper">2</a> Vitalik Buterin et al “Ethereum” (2014)</p>
+</li>
+<li>
+<p><a href="https://blog.slock.it/the-history-of-the-dao-and-lessons-learned-d06740f8cfa5">3</a> Christoph Jentzsch “The History of The DAO and Lessons Learned”</p>
+</li>
+<li>
+<p><a href="https://en.bitcoin.it/wiki/Block_size_limit_controversy">4</a> The block size controversy entry on the bitcoin wiki.</p>
+</li>
+<li>
+<p>[5] R. H. COASE “The Nature of the Firm” (1937)</p>
+</li>
+<li>
+<p><a href="http://www.ijcai.org/Proceedings/83-1/Papers/041.pdf">6</a> Jin H. Kim and Judea Pearl “A COMPUTATIONAL MODEL FOR CAUSAL AND DIAGNOSTIC REASONING IN INFERENCE SYSTEMS”</p>
+</li>
+<li>
+<p>[7] Rene Descartes “A Discourse on Method” (1637) translated by John Veitch (2008)</p>
+</li>
+<li>
+<p>[8] Rivest, Shamir, Adleman “Cryptographic communications system and method” (1983)</p>
+</li>
+<li>
+<p>[9] Linus Torvalds, Junio Hamano et all “git” (2005-)</p>
+</li>
+<li>
+<p><a href="http://ledger-cli.org/">10</a> John Wiegley et all “Ledger-cli” (2003-)</p>
+</li>
+<li>
+<p><a href="http://gitolite.com/gitolite/wild/">11</a> Sitaram Chamarty “gitolite” (2012-)</p>
+</li>
+</ul>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <footer class="footer">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://guld.info">Learn</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.tech">Tech</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.legal">Legal</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.gg">Games</a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://t.me/guldblocktree">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/guldcoin">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://bitbucket.org/guld">
+                                <i class="fab fa-bitbucket"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/guldblocktree">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/guldcoin">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.reddit.com/r/guldblocktree/">
+                                <i class="fab fa-reddit"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/channel/UClVwx_qNPp1UmQEjabZWK5A">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.twitch.tv/guldblocktree">
+                                <i class="fab fa-twitch"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/guld.io/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="copytext">&copy; Guld. All rights reserved</div>
+                </div>
+            </div>
+        </footer>
+        <!-- .footer -->
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script>
+        // Open all external links in new window 
+        		$('a').filter(function () {return this.hostname != window.location.hostname;}).attr('target', '_blank');
+    </script>
+</body>
+
+</html>

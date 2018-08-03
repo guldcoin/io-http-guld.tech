@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guld Technical Documents</title>
+
+    <meta property="og:url" content="https://guld.tech" />
+    <meta property="og:image" content="http://guld.tech/img/og.jpg" />
+    <meta property="og:title" content="Guld Technical Documents" />
+    <meta property="og:description" content="Technical documentation for guld" />
+
+    <!-- favicon -->
+    <link rel="icon" href="/img/favicon.png">
+    <meta name="theme-color" content="#000000">
+
+    <!-- web-fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- style css -->
+    <link href="/css/tech.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="header d-print-none">
+        <!-- Navigation -->
+        <nav class="navbar main-menu navbar-expand-sm navbar-light">
+            <h1 id="logo">
+                <a class="navbar-brand page-scroll" href="/">
+                    <span class="logo">
+		               <img src="/img/logo.svg" class="img-responsive" alt="Guld">
+		           </span>
+                </a>
+            </h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		   </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+<li class="nav-item"><a class="nav-link" href="../index.html">index</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">cli</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="../cli/guld-cli.html">guld cli</a>
+<a class="dropdown-item" href="../cli/guld-env-cli.html">guld env cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-cli.html">guld fs cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-foreach-cli.html">guld fs foreach cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-str-replace-cli.html">guld fs str replace cli</a>
+<a class="dropdown-item" href="../cli/guld-git-cli.html">guld git cli</a>
+<a class="dropdown-item" href="../cli/guld-git-config-cli.html">guld git config cli</a>
+<a class="dropdown-item" href="../cli/guld-git-host-cli.html">guld git host cli</a>
+<a class="dropdown-item" href="../cli/guld-git-path-cli.html">guld git path cli</a>
+<a class="dropdown-item" href="../cli/guld-git-remote-cli.html">guld git remote cli</a>
+<a class="dropdown-item" href="../cli/guld-keys-cli.html">guld keys cli</a>
+<a class="dropdown-item" href="../cli/guld-ledger-cli.html">guld ledger cli</a>
+<a class="dropdown-item" href="../cli/guld-mail-cli.html">guld mail cli</a>
+<a class="dropdown-item" href="../cli/guld-pass-cli.html">guld pass cli</a>
+<a class="dropdown-item" href="../cli/guld-random-cli.html">guld random cli</a>
+<a class="dropdown-item" href="../cli/guld-sdk-cli.html">guld sdk cli</a>
+<a class="dropdown-item" href="../cli/guld-user-cli.html">guld user cli</a>
+</div></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">lib</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="../lib/flexfs.html">flexfs</a>
+<a class="dropdown-item" href="../lib/gpg-conf.html">gpg conf</a>
+<a class="dropdown-item" href="../lib/guld-docs.html">guld docs</a>
+<a class="dropdown-item" href="../lib/guld-env.html">guld env</a>
+<a class="dropdown-item" href="../lib/guld-fs-foreach.html">guld fs foreach</a>
+<a class="dropdown-item" href="../lib/guld-fs-str-replace.html">guld fs str replace</a>
+<a class="dropdown-item" href="../lib/guld-fs.html">guld fs</a>
+<a class="dropdown-item" href="../lib/guld-git-config.html">guld git config</a>
+<a class="dropdown-item" href="../lib/guld-git-host-bitbucket.html">guld git host bitbucket</a>
+<a class="dropdown-item" href="../lib/guld-git-host-github.html">guld git host github</a>
+<a class="dropdown-item" href="../lib/guld-git-host-gitlab.html">guld git host gitlab</a>
+<a class="dropdown-item" href="../lib/guld-git-host.html">guld git host</a>
+<a class="dropdown-item" href="../lib/guld-git-path.html">guld git path</a>
+<a class="dropdown-item" href="../lib/guld-git-remote.html">guld git remote</a>
+<a class="dropdown-item" href="../lib/guld-git.html">guld git</a>
+<a class="dropdown-item" href="../lib/guld-keys-bitcoin.html">guld keys bitcoin</a>
+<a class="dropdown-item" href="../lib/guld-keys.html">guld keys</a>
+<a class="dropdown-item" href="../lib/guld-ledger.html">guld ledger</a>
+<a class="dropdown-item" href="../lib/guld-mail.html">guld mail</a>
+<a class="dropdown-item" href="../lib/guld-pass.html">guld pass</a>
+<a class="dropdown-item" href="../lib/guld-random.html">guld random</a>
+<a class="dropdown-item" href="../lib/guld-spawn.html">guld spawn</a>
+<a class="dropdown-item" href="../lib/guld-user.html">guld user</a>
+<a class="dropdown-item" href="../lib/guld-zip-fs.html">guld zip fs</a>
+<a class="dropdown-item" href="../lib/keyring-gpg.html">keyring gpg</a>
+<a class="dropdown-item" href="../lib/keyring-interface.html">keyring interface</a>
+<a class="dropdown-item" href="../lib/keyvaluedb.html">keyvaluedb</a>
+<a class="dropdown-item" href="../lib/ledger-types.html">ledger types</a>
+</div></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">papers</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="guld-dapp-architecture.html">guld dapp architecture</a>
+<a class="dropdown-item" href="guld-whitepaper.html">guld whitepaper</a>
+<a class="dropdown-item" href="guldFS_Specification.html">guldFS Specification</a>
+<a class="dropdown-item" href="guldOS_Specification.html">guldOS Specification</a>
+<a class="dropdown-item" href="guld_email.html">guld email</a>
+<a class="dropdown-item" href="guld_ledger.html">guld ledger</a>
+<a class="dropdown-item" href="guld_name_service.html">guld name service</a>
+</div></li>
+</ul>
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- .nav -->
+    </header>
+
+    <div class="container-fluid">
+
+        <section id="content" class="container">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div class="col-12">
+                    <div class="room">
+                        <h1>guld FileSystem (guldFS) Specification</h1>
+<p><strong>Author:</strong></p>
+<p>Ira Miller <a href="mailto:public@iramiller.com">public@iramiller.com</a></p>
+<p>License: CC-BY-4</p>
+<p>DRAFT</p>
+<p>v0.0.2</p>
+<h2>Overview</h2>
+<p>The guld FileSystem (guldFS) is a distributed, signed, encryptable, and version controlled filesystem in user space. guldFS is designed to run in Linux using stable, open source components like git, GnuPG, bittorrent, and FUSE.</p>
+<h2>FUSE</h2>
+<p>guldFS uses Filesystem in Userspace (FUSE) to create a native filesystem experience from the kernel level up.</p>
+<p>Local users mount directories using fuse, and make changes like they would edit any other file. The changes are then passed through libfuse to the kernel, and then back out into the local git data directory.</p>
+<p>The local git data directory should be kept in a “clean” state, in the fashion of a git server. Also following git server convention, this data should be managed by a system user named <code>git</code>.</p>
+<p><img src="/img/Fuse_guldfs.jpg" alt="Fuseguldfs"></p>
+<h2>Local Git Server</h2>
+<p>The git server can act only as a local backup of user data, but it can also be configured to synchronize with third party git repositories. To manage the permissions, gitolite is the recommended server.</p>
+<p><a href="http://Gitolite.com">Gitolite</a> can be configured to allow limited secure shell (SSH) sessions by other users identified by their usernames and corresponding SSH keys.</p>
+<p>For example, a group of users <code>family</code> could be given read-only access to all subdirectories of your pictures, but not to your work documents. Anyone authenticating themself with an SSH key known to be in the <code>family</code> group would be allowed to download a picture from you.</p>
+<p>These remote users could be using plain old git repositories, or could also be running guldFS, allowing them to mount your pictures directories on their local system.</p>
+<p><img src="/img/Localgitserver_guldfs.jpg" alt="Localgitguldfs"></p>
+<h2>Branches and Merging</h2>
+<p>Each user will have a named branch for each git repository, so there should never be any ambiguity about which branch to checkout or commit to. The middleware can always commit to and pull from branch <code>isysd</code> for user <code>isysd</code>.</p>
+<p>Each repository should have a designated owner, who governs the contents. When the owner merges a commit, the rule is for all user branches to also merge. This process should be managed for all users and all repositories by a service running under the <code>git</code> user. Since only merges are to be performed by this service, it does not need an identity or signing key, and only needs write access to the clean copy of each repository.</p>
+<p><img src="/img/Branches%26Merging_guldfs.jpg" alt="branchesguldfs"></p>
+<p>The owner could be another user on the same local system, or it could be a remote user identified by username and SSH key. All that is required for consensus, and for merging, is that the official owner key(s) have signed the owner branch. Once the threshold of signatures is met, the commit(s) should be merged into all Reader branches.</p>
+<h2>guld Network</h2>
+<p>The guld network is peer to peer and split into two halves: messaging (metadata) and SSH (data). The messaging portion is a pub/sub 0MQ network, where each network node publishes known commit hashes. The SSH portion of the network is for retrieving and pushing the contents of each commit.</p>
+<p><img src="/img/guldnetwork_guldfs.jpg" alt="networkguldfs"></p>
+<p>The contents of the 0MQ messages should consist of <code>$user:$repository:$commit-hash</code>. Because the contents are not sent, and not recoverable based on the hash, these messages are safe to distribute all across the network in a <code>gossip</code> pool. The term gossip is used because the messages are not necessarily observed by the sending node, and neither node may be able to access the full contents that the message refers to. Should an interested and authorized user hear about the message however, he need only open an SSH connection to the user in the message, and request to pull down the commit hash.</p>
+<h2>Configuration</h2>
+<p>Each repository should be configured using a version controlled file. The recommended name for this file is <code>.gap.ini</code>. The file must, at minimum, describe the path to the repository, and it’s official owner.</p>
+<pre><code class="language-.gap.ini">[guldfs]
+path = /isysd/pictures/family/
+owner = isysd
+</code></pre>
+<p>This lets other users know the governance for the repository, and it’s address. This address can be used in local file structures (i.e. mounted at /home/isysd/pictures/family) but that is not required. It is, however, required to name the repository after this path in kebab case (i.e. isysd-pictures-family), and to use the path in all related network messages.</p>
+<h3><strong><em>Additional Configuration</em></strong></h3>
+<p>For additional security, and/or for large file support, it is recommended to use pre and post commit hooks to transform the commit contents. For example, the pre-commit hook might do something like encrypt the files using another user’s PGP key, create a torrent out of the encrypted files, and then commit the torrent to git, ignoring both the plaintext and encrypted files. The reader would have a post-commit hook that would do the reverse, opening the torrent, downloading the encrypted files, then decrypting them to finally access the plaintext file.</p>
+<p><img src="/img/AdditionalConfiguration_guldfs.jpg" alt="additionalconfigguldfs"></p>
+<p>Because git hooks are arbitrarily programmable, it is not necessary to describe every possible use case. The important thing is that each repository declare pre and post commit hooks in .gap.json, so that all members of that repository follow the same rules.</p>
+<pre><code class="language-.gap.ini">[guldfs]
+path = /isysd/pictures/family/
+owner = isysd
+pre-commit = path/to/pre-commit.sh
+post-commit = path/to/post-commit.sh
+</code></pre>
+<h3><strong><em>Mirror Local Filesystem Permissions</em></strong></h3>
+<p>Unix-based filesystems have a common permission scheme, broken into three categories: user, group, others. Each of these can have some combination of read ®, write (w), and execute (x) permissions. These same file permissions exist in guldFS, but are enforced through cryptography. This allows the files to be distributed on a network without compromising the access to any file or directory.</p>
+<p>The enforcement of various combinations and file sizes requires a combination of pre and post commit hooks as described in the Additional Configuration section.</p>
+<p><strong>Hook Format Map</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Format</th>
+<th style="text-align:center">Min Users</th>
+<th style="text-align:center">Max Users</th>
+<th style="text-align:center">Torrent at Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Plain text</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">10 MB</td>
+</tr>
+<tr>
+<td style="text-align:center">GPG Encrypt</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">10 MB</td>
+</tr>
+<tr>
+<td style="text-align:center">AES Encrypt</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">10 MB</td>
+</tr>
+<tr>
+<td style="text-align:center">Torrent</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">N/A</td>
+</tr>
+</tbody>
+</table>
+<p>Depending on how many users are in the group, and how large the file is, one or more hook rules may be in effect. For example, a large, private file for a group of 1 would be GPG encrypted. If a second user was to be added to the group with access to that large file, GPG would still be used, but the GPG encrypted version of the file would then also be torrented.</p>
+<p>The guldFS fuse middleware should automatically determine which rules to apply in most cases, based on the table above. In the case where a user wishes to explicitly set additional rules for a directory, this can be done by editing the .gitignore file with markup properties. The syntax to turn on a rule for following lines is: <code>#guld:&lt;rule1&gt;[:&lt;rule2…]</code>. For example, to turn on the GPG rule for all following files, add the line <code>#guld:gpg</code>. To also include torrenting, use <code>#guld:gpg:torrent</code>.</p>
+<p><strong><em>File Permission Examples</em></strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>User</th>
+<th>Group</th>
+<th>World</th>
+<th>Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/home/&lt;user&gt;/</td>
+<td>6 (+rw)</td>
+<td>4 (+r)</td>
+<td>4 (+r)</td>
+<td>write-check</td>
+</tr>
+<tr>
+<td>/home/&lt;user&gt;/tech</td>
+<td>7 (+rwx)</td>
+<td>5 (+rx)</td>
+<td>5 +®</td>
+<td>write-check</td>
+</tr>
+<tr>
+<td>/home/&lt;user&gt;/.password-store</td>
+<td>6 (+rw)</td>
+<td>4 (+r)</td>
+<td>0</td>
+<td>GPG, write-check</td>
+</tr>
+<tr>
+<td>/home/&lt;user&gt;/Pictures</td>
+<td>6 (+rw)</td>
+<td>4 (+r)</td>
+<td>0</td>
+<td>AES/GPG, write-check</td>
+</tr>
+<tr>
+<td>/home/&lt;user&gt;/Videos</td>
+<td>6 (+rw)</td>
+<td>4 (+r)</td>
+<td>0</td>
+<td>AES/GPG, Torrent, write-check</td>
+</tr>
+</tbody>
+</table>
+<p>In most of these real world examples, only the user has write permission, which needs to be checked. This is as simple as a post-pull hook gpg signature count. If the gpg signature doesn’t match the owner’s, delete the commit. Additionally, either the AES or GPG rule is applied depending on how large the group is, which is contextual. Finally, we make assumptions, like that Pictures are going to be small enough to not require torrenting, but that Videos will almost certainly require it.</p>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <footer class="footer">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://guld.info">Learn</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.tech">Tech</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.legal">Legal</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.gg">Games</a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://t.me/guldblocktree">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/guldcoin">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://bitbucket.org/guld">
+                                <i class="fab fa-bitbucket"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/guldblocktree">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/guldcoin">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.reddit.com/r/guldblocktree/">
+                                <i class="fab fa-reddit"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/channel/UClVwx_qNPp1UmQEjabZWK5A">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.twitch.tv/guldblocktree">
+                                <i class="fab fa-twitch"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/guld.io/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="copytext">&copy; Guld. All rights reserved</div>
+                </div>
+            </div>
+        </footer>
+        <!-- .footer -->
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script>
+        // Open all external links in new window 
+        		$('a').filter(function () {return this.hostname != window.location.hostname;}).attr('target', '_blank');
+    </script>
+</body>
+
+</html>

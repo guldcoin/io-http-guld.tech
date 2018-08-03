@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guld Technical Documents</title>
+
+    <meta property="og:url" content="https://guld.tech" />
+    <meta property="og:image" content="http://guld.tech/img/og.jpg" />
+    <meta property="og:title" content="Guld Technical Documents" />
+    <meta property="og:description" content="Technical documentation for guld" />
+
+    <!-- favicon -->
+    <link rel="icon" href="/img/favicon.png">
+    <meta name="theme-color" content="#000000">
+
+    <!-- web-fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- style css -->
+    <link href="/css/tech.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="header d-print-none">
+        <!-- Navigation -->
+        <nav class="navbar main-menu navbar-expand-sm navbar-light">
+            <h1 id="logo">
+                <a class="navbar-brand page-scroll" href="/">
+                    <span class="logo">
+		               <img src="/img/logo.svg" class="img-responsive" alt="Guld">
+		           </span>
+                </a>
+            </h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		   </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+<li class="nav-item"><a class="nav-link" href="../index.html">index</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">cli</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="../cli/guld-cli.html">guld cli</a>
+<a class="dropdown-item" href="../cli/guld-env-cli.html">guld env cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-cli.html">guld fs cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-foreach-cli.html">guld fs foreach cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-str-replace-cli.html">guld fs str replace cli</a>
+<a class="dropdown-item" href="../cli/guld-git-cli.html">guld git cli</a>
+<a class="dropdown-item" href="../cli/guld-git-config-cli.html">guld git config cli</a>
+<a class="dropdown-item" href="../cli/guld-git-host-cli.html">guld git host cli</a>
+<a class="dropdown-item" href="../cli/guld-git-path-cli.html">guld git path cli</a>
+<a class="dropdown-item" href="../cli/guld-git-remote-cli.html">guld git remote cli</a>
+<a class="dropdown-item" href="../cli/guld-keys-cli.html">guld keys cli</a>
+<a class="dropdown-item" href="../cli/guld-ledger-cli.html">guld ledger cli</a>
+<a class="dropdown-item" href="../cli/guld-mail-cli.html">guld mail cli</a>
+<a class="dropdown-item" href="../cli/guld-pass-cli.html">guld pass cli</a>
+<a class="dropdown-item" href="../cli/guld-random-cli.html">guld random cli</a>
+<a class="dropdown-item" href="../cli/guld-sdk-cli.html">guld sdk cli</a>
+<a class="dropdown-item" href="../cli/guld-user-cli.html">guld user cli</a>
+</div></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">lib</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="../lib/flexfs.html">flexfs</a>
+<a class="dropdown-item" href="../lib/gpg-conf.html">gpg conf</a>
+<a class="dropdown-item" href="../lib/guld-docs.html">guld docs</a>
+<a class="dropdown-item" href="../lib/guld-env.html">guld env</a>
+<a class="dropdown-item" href="../lib/guld-fs-foreach.html">guld fs foreach</a>
+<a class="dropdown-item" href="../lib/guld-fs-str-replace.html">guld fs str replace</a>
+<a class="dropdown-item" href="../lib/guld-fs.html">guld fs</a>
+<a class="dropdown-item" href="../lib/guld-git-config.html">guld git config</a>
+<a class="dropdown-item" href="../lib/guld-git-host-bitbucket.html">guld git host bitbucket</a>
+<a class="dropdown-item" href="../lib/guld-git-host-github.html">guld git host github</a>
+<a class="dropdown-item" href="../lib/guld-git-host-gitlab.html">guld git host gitlab</a>
+<a class="dropdown-item" href="../lib/guld-git-host.html">guld git host</a>
+<a class="dropdown-item" href="../lib/guld-git-path.html">guld git path</a>
+<a class="dropdown-item" href="../lib/guld-git-remote.html">guld git remote</a>
+<a class="dropdown-item" href="../lib/guld-git.html">guld git</a>
+<a class="dropdown-item" href="../lib/guld-keys-bitcoin.html">guld keys bitcoin</a>
+<a class="dropdown-item" href="../lib/guld-keys.html">guld keys</a>
+<a class="dropdown-item" href="../lib/guld-ledger.html">guld ledger</a>
+<a class="dropdown-item" href="../lib/guld-mail.html">guld mail</a>
+<a class="dropdown-item" href="../lib/guld-pass.html">guld pass</a>
+<a class="dropdown-item" href="../lib/guld-random.html">guld random</a>
+<a class="dropdown-item" href="../lib/guld-spawn.html">guld spawn</a>
+<a class="dropdown-item" href="../lib/guld-user.html">guld user</a>
+<a class="dropdown-item" href="../lib/guld-zip-fs.html">guld zip fs</a>
+<a class="dropdown-item" href="../lib/keyring-gpg.html">keyring gpg</a>
+<a class="dropdown-item" href="../lib/keyring-interface.html">keyring interface</a>
+<a class="dropdown-item" href="../lib/keyvaluedb.html">keyvaluedb</a>
+<a class="dropdown-item" href="../lib/ledger-types.html">ledger types</a>
+</div></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">papers</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="guld-dapp-architecture.html">guld dapp architecture</a>
+<a class="dropdown-item" href="guld-whitepaper.html">guld whitepaper</a>
+<a class="dropdown-item" href="guldFS_Specification.html">guldFS Specification</a>
+<a class="dropdown-item" href="guldOS_Specification.html">guldOS Specification</a>
+<a class="dropdown-item" href="guld_email.html">guld email</a>
+<a class="dropdown-item" href="guld_ledger.html">guld ledger</a>
+<a class="dropdown-item" href="guld_name_service.html">guld name service</a>
+</div></li>
+</ul>
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- .nav -->
+    </header>
+
+    <div class="container-fluid">
+
+        <section id="content" class="container">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div class="col-12">
+                    <div class="room">
+                        <h1>Architecture for a guld DAPP</h1>
+<p>The general strategy we will recommend for developing guld DAPPs is to clone a selection of branches of the blocktree into the browser’s storage. The DAPP will then be able to read, analyze and transform the data in it’s raw form, as well as use modern web development tools for the UI.</p>
+<p>As a reminder, the blocktree directory structure is:</p>
+<table>
+<thead>
+<tr>
+<th>local path</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/BLOCKTREE/&lt;user&gt;</code></td>
+<td>User’s branch of the blocktree, as a dirty, local git repository.</td>
+</tr>
+<tr>
+<td><code>~/ledger/&lt;code&gt;</code></td>
+<td>User’s perspective on the ledger for commodity <code>&lt;code&gt;</code></td>
+</tr>
+<tr>
+<td><code>~/keys/pgp/&lt;username&gt;/&lt;fpr&gt;.asc</code></td>
+<td>PGP public keys, sorted by username then fingerprint.</td>
+</tr>
+<tr>
+<td><code>~/devices/&lt;username&gt;/&lt;devicename&gt;/etc/hosts</code></td>
+<td>Official device config file, as signed by device owner.</td>
+</tr>
+<tr>
+<td><code>~/tech/&lt;lang&gt;</code></td>
+<td>Source code sorted by language.</td>
+</tr>
+<tr>
+<td><code>~/.password-store</code></td>
+<td>Standard Unix Password Manager data directory. Contents PGP encrypted.</td>
+</tr>
+<tr>
+<td><code>~/blocktree/&lt;username&gt;</code></td>
+<td>Owner’s perspective on another blocktree branch (individual or group)</td>
+</tr>
+</tbody>
+</table>
+<h2>Pre-requisites</h2>
+<p>There are three big pre-requisites for any guld DAPP: pgp, git, and ledger. For guld games, we had to make all three available in the browser environment, which adds two important restrictions: Javascript, and sandboxed access to resources like the filesystem and local programs.</p>
+<h3>PGP</h3>
+<p>Thankfully, Javascript has a full, audited implementation of OpenPGP called <a href="https://openpgpjs.org/">OpenPGP.js</a>. Since the implementation is quite complete, this library even supports OpenPGP devices like smart cards and hardware wallets.</p>
+<h3>Git</h3>
+<p>For git, the Javascript option are not as complete or robust. Of the native jS (no API to system git) options, most do not have PGP signing functionality implemented, and additionally most are not built with the browser environment in mind.</p>
+<p><a href="https://isomorphic-git.github.io/">Isomorphic-git</a> is a new implementation, however, which already meets all of our needs, and is on it’s way to becoming the best, most complete JS implementation of git. It works in the browser, and implements PGP commit signing and verification.</p>
+<h3>Ledger</h3>
+<p>Ledger is required to consume accounting data, and there is no Javascript implementation. In fact, there are few JS tools related to ledger, and most are poorly maintained. On the other hand, the original ledger-cli implementation runs well on Windows, Linux and Mac, and is very stable.</p>
+<p>The recommended method for consuming ledger data from a guld DAPP is using the <a href="https://github.com/guldcoin/ledger-native">ledger-native</a> bindings, which implement chrome’s <a href="https://developer.chrome.com/apps/nativeMessaging">native messaging API</a>. These bindings come with installation instructions for the operating systems listed above, and allow generic access to the system’s installed ledger.</p>
+<pre><code class="language-Javascript">chrome.runtime.sendNativeMessage('com.guld.ledger',
+  {'cmd': 'bal', 'stdin': ledgerdata},
+  response =&gt; {
+      console.log(response)
+  }
+)
+</code></pre>
+<h2>Useful additions</h2>
+<h3>BrowserFS</h3>
+<p><a href="https://github.com/jvilk/BrowserFS">BrowserFS</a> “emulates the nodejs filesystem API.” Immediately, this lets us stage our git repositories in browser memory or storage, and interact with them in the normal git fashion. Isomorphic-git provides this sort of API, and is <code>fs</code> agnostic, happily accepting BrowserFS instances.</p>
+<p>In the long term, a guldFS backend could be written for BrowserFS, allowing more seemless and native integration with the blocktree.</p>
+<h2>The guld JS library</h2>
+<p>The guld JS library uses the above tools to implement the required functionality of guld-ledger and the guld group.</p>
+<ul>
+<li>Name registration</li>
+<li>Key management</li>
+<li>Ledger transaction templates for transfer, grant, and register</li>
+</ul>
+<h2>Your DAPP library</h2>
+<p>The primary contract for your DAPP should be implemented as a separate library. This makes code audits and interaction easy to separate from UI. For example, you should have an agreement like <a href="https://github.com/guld-games/Documents/blob/master/contracts/gg-agreement.md">this one</a> for <a href="https://guld.gg">guld games</a>. This agreement should define your overall group concensus rules, as well as allowed transformations to the group’s data.</p>
+<p>If your group has a ledger, custom transaction templates can be defined to suppliment those made availale in the guld JS lib.</p>
+<h2>Your DAPP UI</h2>
+<p>Finally, you can import all of the above and get to work on the frontend. From here on out it is standard web development, with the understanding that the above tools should be used to replace any server.</p>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <footer class="footer">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://guld.info">Learn</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.tech">Tech</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.legal">Legal</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.gg">Games</a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://t.me/guldblocktree">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/guldcoin">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://bitbucket.org/guld">
+                                <i class="fab fa-bitbucket"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/guldblocktree">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/guldcoin">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.reddit.com/r/guldblocktree/">
+                                <i class="fab fa-reddit"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/channel/UClVwx_qNPp1UmQEjabZWK5A">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.twitch.tv/guldblocktree">
+                                <i class="fab fa-twitch"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/guld.io/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="copytext">&copy; Guld. All rights reserved</div>
+                </div>
+            </div>
+        </footer>
+        <!-- .footer -->
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script>
+        // Open all external links in new window 
+        		$('a').filter(function () {return this.hostname != window.location.hostname;}).attr('target', '_blank');
+    </script>
+</body>
+
+</html>

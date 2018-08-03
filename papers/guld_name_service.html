@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guld Technical Documents</title>
+
+    <meta property="og:url" content="https://guld.tech" />
+    <meta property="og:image" content="http://guld.tech/img/og.jpg" />
+    <meta property="og:title" content="Guld Technical Documents" />
+    <meta property="og:description" content="Technical documentation for guld" />
+
+    <!-- favicon -->
+    <link rel="icon" href="/img/favicon.png">
+    <meta name="theme-color" content="#000000">
+
+    <!-- web-fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- style css -->
+    <link href="/css/tech.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="header d-print-none">
+        <!-- Navigation -->
+        <nav class="navbar main-menu navbar-expand-sm navbar-light">
+            <h1 id="logo">
+                <a class="navbar-brand page-scroll" href="/">
+                    <span class="logo">
+		               <img src="/img/logo.svg" class="img-responsive" alt="Guld">
+		           </span>
+                </a>
+            </h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		   </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+<li class="nav-item"><a class="nav-link" href="../index.html">index</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">cli</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="../cli/guld-cli.html">guld cli</a>
+<a class="dropdown-item" href="../cli/guld-env-cli.html">guld env cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-cli.html">guld fs cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-foreach-cli.html">guld fs foreach cli</a>
+<a class="dropdown-item" href="../cli/guld-fs-str-replace-cli.html">guld fs str replace cli</a>
+<a class="dropdown-item" href="../cli/guld-git-cli.html">guld git cli</a>
+<a class="dropdown-item" href="../cli/guld-git-config-cli.html">guld git config cli</a>
+<a class="dropdown-item" href="../cli/guld-git-host-cli.html">guld git host cli</a>
+<a class="dropdown-item" href="../cli/guld-git-path-cli.html">guld git path cli</a>
+<a class="dropdown-item" href="../cli/guld-git-remote-cli.html">guld git remote cli</a>
+<a class="dropdown-item" href="../cli/guld-keys-cli.html">guld keys cli</a>
+<a class="dropdown-item" href="../cli/guld-ledger-cli.html">guld ledger cli</a>
+<a class="dropdown-item" href="../cli/guld-mail-cli.html">guld mail cli</a>
+<a class="dropdown-item" href="../cli/guld-pass-cli.html">guld pass cli</a>
+<a class="dropdown-item" href="../cli/guld-random-cli.html">guld random cli</a>
+<a class="dropdown-item" href="../cli/guld-sdk-cli.html">guld sdk cli</a>
+<a class="dropdown-item" href="../cli/guld-user-cli.html">guld user cli</a>
+</div></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">lib</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="../lib/flexfs.html">flexfs</a>
+<a class="dropdown-item" href="../lib/gpg-conf.html">gpg conf</a>
+<a class="dropdown-item" href="../lib/guld-docs.html">guld docs</a>
+<a class="dropdown-item" href="../lib/guld-env.html">guld env</a>
+<a class="dropdown-item" href="../lib/guld-fs-foreach.html">guld fs foreach</a>
+<a class="dropdown-item" href="../lib/guld-fs-str-replace.html">guld fs str replace</a>
+<a class="dropdown-item" href="../lib/guld-fs.html">guld fs</a>
+<a class="dropdown-item" href="../lib/guld-git-config.html">guld git config</a>
+<a class="dropdown-item" href="../lib/guld-git-host-bitbucket.html">guld git host bitbucket</a>
+<a class="dropdown-item" href="../lib/guld-git-host-github.html">guld git host github</a>
+<a class="dropdown-item" href="../lib/guld-git-host-gitlab.html">guld git host gitlab</a>
+<a class="dropdown-item" href="../lib/guld-git-host.html">guld git host</a>
+<a class="dropdown-item" href="../lib/guld-git-path.html">guld git path</a>
+<a class="dropdown-item" href="../lib/guld-git-remote.html">guld git remote</a>
+<a class="dropdown-item" href="../lib/guld-git.html">guld git</a>
+<a class="dropdown-item" href="../lib/guld-keys-bitcoin.html">guld keys bitcoin</a>
+<a class="dropdown-item" href="../lib/guld-keys.html">guld keys</a>
+<a class="dropdown-item" href="../lib/guld-ledger.html">guld ledger</a>
+<a class="dropdown-item" href="../lib/guld-mail.html">guld mail</a>
+<a class="dropdown-item" href="../lib/guld-pass.html">guld pass</a>
+<a class="dropdown-item" href="../lib/guld-random.html">guld random</a>
+<a class="dropdown-item" href="../lib/guld-spawn.html">guld spawn</a>
+<a class="dropdown-item" href="../lib/guld-user.html">guld user</a>
+<a class="dropdown-item" href="../lib/guld-zip-fs.html">guld zip fs</a>
+<a class="dropdown-item" href="../lib/keyring-gpg.html">keyring gpg</a>
+<a class="dropdown-item" href="../lib/keyring-interface.html">keyring interface</a>
+<a class="dropdown-item" href="../lib/keyvaluedb.html">keyvaluedb</a>
+<a class="dropdown-item" href="../lib/ledger-types.html">ledger types</a>
+</div></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true" href="#">papers</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="guld-dapp-architecture.html">guld dapp architecture</a>
+<a class="dropdown-item" href="guld-whitepaper.html">guld whitepaper</a>
+<a class="dropdown-item" href="guldFS_Specification.html">guldFS Specification</a>
+<a class="dropdown-item" href="guldOS_Specification.html">guldOS Specification</a>
+<a class="dropdown-item" href="guld_email.html">guld email</a>
+<a class="dropdown-item" href="guld_ledger.html">guld ledger</a>
+<a class="dropdown-item" href="guld_name_service.html">guld name service</a>
+</div></li>
+</ul>
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- .nav -->
+    </header>
+
+    <div class="container-fluid">
+
+        <section id="content" class="container">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div class="col-12">
+                    <div class="room">
+                        <h1>guld Name Service (gns)</h1>
+<p><strong>Authors:</strong></p>
+<p>Ira Miller <a href="mailto:public@iramiller.com">public@iramiller.com</a></p>
+<p>Cindy Zimmerman <a href="mailto:cindy@tigoctm.com">cindy@tigoctm.com</a></p>
+<p>License: CC-BY-4.0</p>
+<p>DRAFT</p>
+<p>v0.0.1</p>
+<h2>Overview</h2>
+<p>The guld name service aka gns is a decentralized replacement for the legacy Dynamic Name Service (DNS) infrastructure. Peers of the guld network will keep their own and each other’s MAC and IP address history for p2p routing of standard TCP and UDP traffic. guld name service also introduces a new naming and domain routing scheme, with usernames as personal, top level domains.</p>
+<h2>Names</h2>
+<p>Each user and group is required to register a unique, alphanumeric name, which is treated like a top level domain. I.e. if my name is <code>isysd</code>, then peers could address me with urls ending in <code>.isysd</code></p>
+<p>Individual devices are registered under a top level user, with a set of child keys. Devices have names unique for their owner. For example, user <code>isysd</code> might have devices <code>phone</code> and <code>laptop</code> with individual addresses <code>phone.isysd</code> and <code>laptop.isysd</code></p>
+<h3><strong><em>Structure of a guld URI</em></strong></h3>
+<p><code>&lt;device name&gt;.&lt;user or group name&gt;/&lt;blocktree path&gt;</code></p>
+<h3><strong><em>Name ownership</em></strong></h3>
+<p>All names are issued and governed by the <code>guld</code> group. A name is considered registered when greater than 50% of the guld equity recognize it.</p>
+<p>Each name must list one or more RSA 2048+ bit pgp keys for signing, and register or be authorized by at minimum one full node. The signing arrangement determines which type of name can be registered.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Keys</th>
+<th>Registration Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>device</td>
+<td>user or group as parent</td>
+<td>0.1 guld</td>
+</tr>
+<tr>
+<td>user</td>
+<td>one parent key</td>
+<td>1 guld</td>
+</tr>
+<tr>
+<td>group</td>
+<td>1-10 user(s) as parents</td>
+<td>1 guld / member</td>
+</tr>
+<tr>
+<td>medium group</td>
+<td>11-100 users as parents</td>
+<td>100 guld</td>
+</tr>
+<tr>
+<td>large group</td>
+<td>101-1,000 users as parents</td>
+<td>1,000 guld</td>
+</tr>
+<tr>
+<td>enterprise group</td>
+<td>1,001+ users as parents</td>
+<td>10,000 guld</td>
+</tr>
+</tbody>
+</table>
+<h2>Name Resolution</h2>
+<p>Each user and group is responsible for maintaining an up to date, signed record of their devices, including MAC and IP address history. Additionally, each group must maintain a complete record of all active members.</p>
+<p>Optionally, users may maintain each other’s records for direct routing.</p>
+<p>As a last resort, the guld group should be the parent to all other public areas of the network.</p>
+<p>Therefore, each request can be routed using the following priorities.</p>
+<p><code>local -&gt; friends -&gt; groups -&gt; guld group</code></p>
+<h3><strong><em>Blocktree Path Resolution</em></strong></h3>
+<p>Once the device has been resolved, a path resolution process begins. This is the same as http, where a FQDN determines a server, then the path determines which files to load off of said server. For example, say you reach <a href="http://google.com">http://google.com</a>, a fully qualified domain name (FQDN). You now need to tell the <a href="http://google.com">google.com</a> server(s) which record of theirs you would like, i.e. <a href="http://google.com/images">google.com/images</a> for google images. The part after the top level domain (.com) is the path.</p>
+<p>In the guld network, paths are strictly ordered according to the blocktree taxonomy. That is, each host serves paths relative to <code>/home/&lt;owner name&gt;</code>. For example, each member is required to have a directory <code>/devices</code>. Assuming the user’s name is <code>isysd</code>, that directory would be locally mounted at <code>/home/isysd/devices</code>. If being addressed on the network, the directory could be loaded alternately by <code>isysd/devices</code> or <code>&lt;device name&gt;.isysd/devices</code></p>
+<p>The top tier of directories is referred to as <code>b1</code>, and is also governed by the guld group. guld reserves the right to assign new <code>b1</code> names, which may become required branches for some or all guld members. Tentatively, a suggested requirement of 25,000 guld and 66% guld equity approval would be required to register a new <code>b1</code> name.</p>
+<table>
+<thead>
+<tr>
+<th>Blocktree level</th>
+<th>Registration Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>‘b1’</td>
+<td>25,000 guld</td>
+</tr>
+<tr>
+<td>‘b2’</td>
+<td>licensed with <code>b1</code></td>
+</tr>
+</tbody>
+</table>
+<p>After <code>b1</code>, paths are governed by the <code>b1</code> owner. For example, the guld group owns <code>b1</code> record <code>devices</code>, and requires the following subdirectory structure: <code>/devices/&lt;device name&gt;/etc/hosts</code>. In this case, the device’s active <code>hosts</code> file is the expected response.</p>
+<h3><strong><em>Format</em></strong></h3>
+<p>The gns routing tables must be formatted as <code>hosts</code> files, typically found at <code>/etc/hosts</code>. Individual device <code>hosts</code> files are concatenated regularly by a local service, creating a local name cache. This cache of friends is the preferred node list for any network queries, including for routing info.</p>
+<p>Groups link <code>hosts</code> files for all members, including said members’ network addresses. Therefore, groups can be treated as a routing table for members.</p>
+<p>Individual <code>hosts</code> file entries consist of an IP address, whitespace, and then a domain name. For example, most devices will include a localhost domain for routing locally.</p>
+<h3><strong><em>Example hosts line</em></strong></h3>
+<p><code>127.0.0.1	localhost</code></p>
+<h2>Feasibility</h2>
+<h3><strong><em>User Experience</em></strong></h3>
+<p>Because <code>hosts</code> files are (configurably) used before remote dns resolution, this method provides a seamless UX. Users and programs make dns requests like usual, and the local operating system knows to prioritize local <code>hosts</code>records.</p>
+<h3><strong><em>Servers</em></strong></h3>
+<p>While <code>gns</code> is designed as a p2p network, its feasible users will want services to complement light devices such as phones. These devices are not capable of maintaining a full node, and therefore, must be associated with one.</p>
+<p>Such node hosting services are allowed on the network and may charge whatever fees users agree to, so long as their nodes meet the technical requirements.</p>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <footer class="footer">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://guld.info">Learn</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.tech">Tech</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.legal">Legal</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://guld.gg">Games</a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://t.me/guldblocktree">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/guldcoin">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://bitbucket.org/guld">
+                                <i class="fab fa-bitbucket"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/guldblocktree">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/guldcoin">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.reddit.com/r/guldblocktree/">
+                                <i class="fab fa-reddit"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/channel/UClVwx_qNPp1UmQEjabZWK5A">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.twitch.tv/guldblocktree">
+                                <i class="fab fa-twitch"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/guld.io/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="copytext">&copy; Guld. All rights reserved</div>
+                </div>
+            </div>
+        </footer>
+        <!-- .footer -->
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script>
+        // Open all external links in new window 
+        		$('a').filter(function () {return this.hostname != window.location.hostname;}).attr('target', '_blank');
+    </script>
+</body>
+
+</html>
