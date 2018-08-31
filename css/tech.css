@@ -71,11 +71,6 @@ code{
 	padding: .2em;	
 }
 
-.dropdown-menu{
-	max-height: 420px;
-	overflow: auto;
-}
-
 
 span.typed-cursor {
     font-size: 4.4rem;

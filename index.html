@@ -57,6 +57,7 @@
 <a class="dropdown-item" href="cli/guld-keys-cli.html">guld keys cli</a>
 <a class="dropdown-item" href="cli/guld-ledger-cli.html">guld ledger cli</a>
 <a class="dropdown-item" href="cli/guld-mail-cli.html">guld mail cli</a>
+<a class="dropdown-item" href="cli/guld-market-cli.html">guld market cli</a>
 <a class="dropdown-item" href="cli/guld-pass-cli.html">guld pass cli</a>
 <a class="dropdown-item" href="cli/guld-random-cli.html">guld random cli</a>
 <a class="dropdown-item" href="cli/guld-sdk-cli.html">guld sdk cli</a>
@@ -67,6 +68,7 @@
 <div class="dropdown-menu dropdown-menu-right">
 <a class="dropdown-item" href="lib/flexfs.html">flexfs</a>
 <a class="dropdown-item" href="lib/gpg-conf.html">gpg conf</a>
+<a class="dropdown-item" href="lib/guld-app.html">guld app</a>
 <a class="dropdown-item" href="lib/guld-docs.html">guld docs</a>
 <a class="dropdown-item" href="lib/guld-env.html">guld env</a>
 <a class="dropdown-item" href="lib/guld-fs-foreach.html">guld fs foreach</a>
@@ -82,6 +84,11 @@
 <a class="dropdown-item" href="lib/guld-git.html">guld git</a>
 <a class="dropdown-item" href="lib/guld-keys-bitcoin.html">guld keys bitcoin</a>
 <a class="dropdown-item" href="lib/guld-keys.html">guld keys</a>
+<a class="dropdown-item" href="lib/guld-ledger-balance.html">guld ledger balance</a>
+<a class="dropdown-item" href="lib/guld-ledger-cache.html">guld ledger cache</a>
+<a class="dropdown-item" href="lib/guld-ledger-grant.html">guld ledger grant</a>
+<a class="dropdown-item" href="lib/guld-ledger-register.html">guld ledger register</a>
+<a class="dropdown-item" href="lib/guld-ledger-transfer.html">guld ledger transfer</a>
 <a class="dropdown-item" href="lib/guld-ledger.html">guld ledger</a>
 <a class="dropdown-item" href="lib/guld-mail.html">guld mail</a>
 <a class="dropdown-item" href="lib/guld-pass.html">guld pass</a>
@@ -91,6 +98,7 @@
 <a class="dropdown-item" href="lib/guld-zip-fs.html">guld zip fs</a>
 <a class="dropdown-item" href="lib/keyring-gpg.html">keyring gpg</a>
 <a class="dropdown-item" href="lib/keyring-interface.html">keyring interface</a>
+<a class="dropdown-item" href="lib/keyring-pgp.html">keyring pgp</a>
 <a class="dropdown-item" href="lib/keyvaluedb.html">keyvaluedb</a>
 <a class="dropdown-item" href="lib/ledger-types.html">ledger types</a>
 </div></li>
@@ -122,7 +130,7 @@
 <li><a href="/papers/guld-whitepaper.html">Whitepaper</a></li>
 <li><a href="/papers/guldFS_Specification.html">GuldFS Decentralized Filesystem Specificatoin</a></li>
 <li><a href="/papers/guldOS_Specification.html">GuldFS Operating System</a></li>
-<li><a href="/papers/guld_name_service.html">Guld Name Service</a></li>
+<li><a href="/papers/guld-name-service.html">Guld Name Service</a></li>
 </ul>
 <h3>CLI</h3>
 <p>Guld node operators and power users will want to start by installing <a href="/cli/guld-cli.html">guld-cli</a>. This master guld command should install all others you need to interact with the network. Some important sub-commands installed are:</p>
@@ -139,14 +147,14 @@
 <h3>lib</h3>
 <p>All unique <a href="/cli/guld-cli.html">guld-cli</a> functionality is also available in libraries. Developers will import these, while the CLI versions of each package serve as great lib usage examples.</p>
 <ul>
-<li><a href="/lib/flexfs.html">flexfs</a></li>
-<li><a href="/lib/guld-env.html">guld-env</a></li>
-<li><a href="/lib/guld-fs.html">guld-fs</a></li>
-<li><a href="/lib/guld-git.html">guld-git</a></li>
-<li><a href="/lib/guld-keys.html">guld-keys</a></li>
-<li><a href="/lib/guld-pass.html">guld-pass</a></li>
-<li><a href="/lib/guld-mail.html">guld-mail</a></li>
-<li><a href="/lib/guld-random.html">guld-random</a></li>
+<li><a href="/cli/guld.html">flexfs</a></li>
+<li><a href="/cli/guld-env.html">guld-env</a></li>
+<li><a href="/cli/guld-fs.html">guld-fs</a></li>
+<li><a href="/cli/guld-git.html">guld-git</a></li>
+<li><a href="/cli/guld-keys.html">guld-keys</a></li>
+<li><a href="/cli/guld-pass.html">guld-pass</a></li>
+<li><a href="/cli/guld-mail.html">guld-mail</a></li>
+<li><a href="/cli/guld-random.html">guld-random</a></li>
 </ul>
 
 
@@ -159,12 +167,6 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <a href="https://guld.io">Intro</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://guld.app">Wallet</a>
-                        </li>
                         <li class="list-inline-item">
                             <a href="https://guld.info">Learn</a>
                         </li>

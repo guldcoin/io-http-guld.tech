@@ -57,6 +57,7 @@
 <a class="dropdown-item" href="../cli/guld-keys-cli.html">guld keys cli</a>
 <a class="dropdown-item" href="../cli/guld-ledger-cli.html">guld ledger cli</a>
 <a class="dropdown-item" href="../cli/guld-mail-cli.html">guld mail cli</a>
+<a class="dropdown-item" href="../cli/guld-market-cli.html">guld market cli</a>
 <a class="dropdown-item" href="../cli/guld-pass-cli.html">guld pass cli</a>
 <a class="dropdown-item" href="../cli/guld-random-cli.html">guld random cli</a>
 <a class="dropdown-item" href="../cli/guld-sdk-cli.html">guld sdk cli</a>
@@ -67,6 +68,7 @@
 <div class="dropdown-menu dropdown-menu-right">
 <a class="dropdown-item" href="flexfs.html">flexfs</a>
 <a class="dropdown-item" href="gpg-conf.html">gpg conf</a>
+<a class="dropdown-item" href="guld-app.html">guld app</a>
 <a class="dropdown-item" href="guld-docs.html">guld docs</a>
 <a class="dropdown-item" href="guld-env.html">guld env</a>
 <a class="dropdown-item" href="guld-fs-foreach.html">guld fs foreach</a>
@@ -82,6 +84,11 @@
 <a class="dropdown-item" href="guld-git.html">guld git</a>
 <a class="dropdown-item" href="guld-keys-bitcoin.html">guld keys bitcoin</a>
 <a class="dropdown-item" href="guld-keys.html">guld keys</a>
+<a class="dropdown-item" href="guld-ledger-balance.html">guld ledger balance</a>
+<a class="dropdown-item" href="guld-ledger-cache.html">guld ledger cache</a>
+<a class="dropdown-item" href="guld-ledger-grant.html">guld ledger grant</a>
+<a class="dropdown-item" href="guld-ledger-register.html">guld ledger register</a>
+<a class="dropdown-item" href="guld-ledger-transfer.html">guld ledger transfer</a>
 <a class="dropdown-item" href="guld-ledger.html">guld ledger</a>
 <a class="dropdown-item" href="guld-mail.html">guld mail</a>
 <a class="dropdown-item" href="guld-pass.html">guld pass</a>
@@ -91,6 +98,7 @@
 <a class="dropdown-item" href="guld-zip-fs.html">guld zip fs</a>
 <a class="dropdown-item" href="keyring-gpg.html">keyring gpg</a>
 <a class="dropdown-item" href="keyring-interface.html">keyring interface</a>
+<a class="dropdown-item" href="keyring-pgp.html">keyring pgp</a>
 <a class="dropdown-item" href="keyvaluedb.html">keyvaluedb</a>
 <a class="dropdown-item" href="ledger-types.html">ledger types</a>
 </div></li>
@@ -116,6 +124,7 @@
                 <div class="col-12">
                     <div class="room">
                         <h1>guld-env</h1>
+<p><a href="https://www.npmjs.com/package/guld-env"><img src="https://img.shields.io/npm/v/guld-env.svg" alt="npm"></a> <a href="https://travis-ci.org/guldcoin/tech-js-node_modules-guld-env"><img src="https://travis-ci.org/guldcoin/tech-js-node_modules-guld-env.svg?branch=guld" alt="Build Status"></a> <a href="https://bitbucket.org/guld/tech-js-node_modules-guld-env"><img src="https://img.shields.io/badge/source-bitbucket-blue.svg" alt="source"></a> <a href="https://bitbucket.org/guld/tech-js-node_modules-guld-env/issues"><img src="https://img.shields.io/badge/issues-bitbucket-yellow.svg" alt="issues"></a></p>
 <p>Guld environment detection and configuration module.</p>
 <h3>Example Output</h3>
 <pre><code>linux
@@ -127,16 +136,26 @@ node@10.5.0
 <pre><code>npm i guld-env
 </code></pre>
 <h3>Usage</h3>
-<pre><code>// syncronous
-console.log(getJS()) // node@10.5.0
+<pre><code>// properties
+console.log(guldEnv.name) // chrome
+console.log(guldEnv.version) // 70.x.x
+console.log(guldEnv.JS) // chrome@70.x.x
+console.log(guldEnv.protocol) // file
 
 // async
-getDist().then(console.log) // Ubuntu Linux
-getOS().then(console.log) // linux
-getRelease().then(console.log) // 18.04 bionic
+guldEnv.os().then(console.log)
+/*
+{ os: 'linux',
+  dist: 'Ubuntu',
+  codename: 'bionic',
+  release: '18.04' }
+*/
 </code></pre>
 <h5>Node</h5>
-<pre><code>const { getEnv, getDist, getOS, getRelease } = require('guld-env')
+<pre><code>const guldEnv = require('guld-env')
+</code></pre>
+<h5>Browser</h5>
+<pre><code>&lt;script src=&quot;guld-env.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 <h5>CLI</h5>
 <p>The cli for this module is named <code>guld-env-cli</code> and is available from guld git hosts and npm.</p>
@@ -153,12 +172,6 @@ getRelease().then(console.log) // 18.04 bionic
             <div class="row">
                 <div class="col-12 text-center">
                     <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <a href="https://guld.io">Intro</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://guld.app">Wallet</a>
-                        </li>
                         <li class="list-inline-item">
                             <a href="https://guld.info">Learn</a>
                         </li>

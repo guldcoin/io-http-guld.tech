@@ -57,6 +57,7 @@
 <a class="dropdown-item" href="../cli/guld-keys-cli.html">guld keys cli</a>
 <a class="dropdown-item" href="../cli/guld-ledger-cli.html">guld ledger cli</a>
 <a class="dropdown-item" href="../cli/guld-mail-cli.html">guld mail cli</a>
+<a class="dropdown-item" href="../cli/guld-market-cli.html">guld market cli</a>
 <a class="dropdown-item" href="../cli/guld-pass-cli.html">guld pass cli</a>
 <a class="dropdown-item" href="../cli/guld-random-cli.html">guld random cli</a>
 <a class="dropdown-item" href="../cli/guld-sdk-cli.html">guld sdk cli</a>
@@ -67,6 +68,7 @@
 <div class="dropdown-menu dropdown-menu-right">
 <a class="dropdown-item" href="flexfs.html">flexfs</a>
 <a class="dropdown-item" href="gpg-conf.html">gpg conf</a>
+<a class="dropdown-item" href="guld-app.html">guld app</a>
 <a class="dropdown-item" href="guld-docs.html">guld docs</a>
 <a class="dropdown-item" href="guld-env.html">guld env</a>
 <a class="dropdown-item" href="guld-fs-foreach.html">guld fs foreach</a>
@@ -82,6 +84,11 @@
 <a class="dropdown-item" href="guld-git.html">guld git</a>
 <a class="dropdown-item" href="guld-keys-bitcoin.html">guld keys bitcoin</a>
 <a class="dropdown-item" href="guld-keys.html">guld keys</a>
+<a class="dropdown-item" href="guld-ledger-balance.html">guld ledger balance</a>
+<a class="dropdown-item" href="guld-ledger-cache.html">guld ledger cache</a>
+<a class="dropdown-item" href="guld-ledger-grant.html">guld ledger grant</a>
+<a class="dropdown-item" href="guld-ledger-register.html">guld ledger register</a>
+<a class="dropdown-item" href="guld-ledger-transfer.html">guld ledger transfer</a>
 <a class="dropdown-item" href="guld-ledger.html">guld ledger</a>
 <a class="dropdown-item" href="guld-mail.html">guld mail</a>
 <a class="dropdown-item" href="guld-pass.html">guld pass</a>
@@ -91,6 +98,7 @@
 <a class="dropdown-item" href="guld-zip-fs.html">guld zip fs</a>
 <a class="dropdown-item" href="keyring-gpg.html">keyring gpg</a>
 <a class="dropdown-item" href="keyring-interface.html">keyring interface</a>
+<a class="dropdown-item" href="keyring-pgp.html">keyring pgp</a>
 <a class="dropdown-item" href="keyvaluedb.html">keyvaluedb</a>
 <a class="dropdown-item" href="ledger-types.html">ledger types</a>
 </div></li>
@@ -115,100 +123,56 @@
             <div class="row row-offcanvas row-offcanvas-left">
                 <div class="col-12">
                     <div class="room">
-                        <h1>guld-ledger</h1>
-<p>Guld client for <a href="http://ledger-cli.org">ledger-cli</a>.</p>
-<blockquote>
-<p>Ledger is a powerful, double-entry accounting system that is accessed from the command line.</p>
-</blockquote>
-<h2>Install</h2>
-<pre><code>npm i guld-ledger
+                        <h1>git-config</h1>
+<p>Guld configuration helper manages git config files.</p>
+<h3>Example Output</h3>
+<pre><code>$ guld-config list
+user.username=isysd
+user.signingkey=C7EA0E59D0660BF6848614B6441BDDD420F44729
+commit.gpgsign=true
+alias.pushall=!git remote | xargs -L1 -I R git push R $2
+host.github=isysd
+host.bitbucket=isysd
+host.gitlab=isysd
+core.testing4=true
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
 </code></pre>
-<h3>Dependencies</h3>
-<ul>
-<li><a href="http://ledger-cli.org/">Ledger 3</a></li>
-<li><a href="nodejs.org">Node.js</a></li>
-<li><a href="https://github.com/guldcoin/ledger-native">ledger native chrome</a> (chrome exension API only)</li>
-</ul>
-<h4>Installing Ledger</h4>
-<h5>Ubuntu</h5>
-<p>Aptitude has an up to date build of ledger, so just install it like normal.</p>
-<pre><code>apt-get install ledger
+<h3>Install</h3>
+<pre><code>npm i -g guld-config
 </code></pre>
-<h5>macOS</h5>
-<p>The simplest way to install Ledger 3 for macOS users is through <a href="http://mxcl.github.com/homebrew/">Homebrew</a>.</p>
-<pre><code>brew install ledger --HEAD
+<h3>Usage</h3>
+<pre><code>// async
+// assume it's empty
+var cfg = await getConfig('local') // {}
+cfg.core.test = true
+setConfig('cfg.core.test', true)
+var cfg = await getConfig('local') // {core: {test: true}}
 </code></pre>
-<p>The <code>--HEAD</code> option is required to install version 3.x.</p>
-<h2>Usage</h2>
-<p>First import <code>guld-ledger</code> or include it in your browser build using your favorite bundler.</p>
-<pre><code>const { balance, register, cache } = require('guld-ledger')
+<h5>Node</h5>
+<pre><code>const { guldName, getConfig, setConfig, unsetConfig } = require('guld-config')
+</code></pre>
+<h5>CLI</h5>
+<pre><code>  Usage: guld-config [options] [command]
 
-// cache all ledgers in the given ledger dir
-await cache.includeJournal('path/to/ledger/dir')
-</code></pre>
-<h3>Available commands</h3>
-<p>There are six available commands.</p>
-<ul>
-<li><code>accounts</code> - Lists all accounts for postings.</li>
-<li><code>balance</code> - Reports the current balance of all accounts.</li>
-<li><code>print</code> - Prints out the full transactions, sorted by date, using the same format as they would appear in a Ledger data file.</li>
-<li><code>register</code> - Displays all the postings occurring in a single account.</li>
-<li><code>stats</code> - Retrieves statistics, like number of unique accounts.</li>
-<li><code>version</code> - Gets the currently installed Ledger version number.</li>
-</ul>
-<h4>Accounts</h4>
-<p>Lists all accounts for postings. It returns a readable object <code>stream</code>.</p>
-<pre><code class="language-js">ledger.accounts()
-  .on('data', function(account) {
-    // account is the name of an account (e.g. 'Assets:Current Account')
-  })
-</code></pre>
-<h4>Balance</h4>
-<p>The balance command reports the current balance of all accounts. It returns a <a href="https://github.com/isysd/ledger-types">ledger-types</a> Account.</p>
-<pre><code class="language-js">// get the balance for a ledger file
-var bal = await balance('path-to-ledger.dat')
+  Options:
 
-// get the balance from journal string
-bal = await balance(null, 'raw journal data')
-</code></pre>
-<h4>Print</h4>
-<p>The print command formats the full list of transactions, ordered by date, using the same format as they would appear in a Ledger data file. It returns a readable stream.</p>
-<pre><code class="language-js">var pretty = await print('path-to-ledger.dat')
-</code></pre>
-<h3>Register</h3>
-<p>The register command displays all the postings occurring in a single account. It returns a readable object <code>stream</code>.</p>
-<pre><code class="language-js">var reg = await register()
-/*
-[
-  {
-    date: new Date(2014, 1, 1),
-    effectiveDate: new Date(2014, 1, 1),
-    cleared: true,
-    pending: true,
-    payee: 'Salary',
-    postings: [
-      { // a ledger-types.Account object
-        __bal: {value: 1,000.00, commodity: '£'} // a ledger-types Balance object
-        Assets: {
-          __bal: {value: 1,000.00, commodity: '£'}
-          Checking: {
-            __bal: {value: 1,000.00, commodity: '£'}
-          }
-        }
-      }
-    ]
-  }
-]
-*/
-</code></pre>
-<h3>Stats</h3>
-<p>The stats command is used to retrieve statistics about the Ledger data file. It requires a Node style callback function that is called with either an error or the stats object.</p>
-<pre><code class="language-js">var stat = await stats()
-</code></pre>
-<h3>Version</h3>
-<p>The version command is used to get the Ledger binary version. It requires a Node style callback function that is called with either an error or the version number as a string.</p>
-<pre><code class="language-js">// version is a string (e.g. '3.0.0-20130529')
-await version()
+    -V, --version             output the version number
+    --global                  Use the global config file
+    --local                   Use the local config file
+    --system                  Use the system config file.
+    -f, --file &lt;config-file&gt;  Use the given config file.
+    -h, --help                output usage information
+
+  Commands:
+
+    name                      Get the guld name of the current user.
+    get &lt;key&gt;                 Get a config by key.
+    set &lt;key&gt; &lt;value&gt;         Set a config key to the given value.
+    unset                     Get the distro, if linux OS.
+    list                      List all config key/value pairs.
 </code></pre>
 
 
@@ -221,12 +185,6 @@ await version()
             <div class="row">
                 <div class="col-12 text-center">
                     <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <a href="https://guld.io">Intro</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://guld.app">Wallet</a>
-                        </li>
                         <li class="list-inline-item">
                             <a href="https://guld.info">Learn</a>
                         </li>
