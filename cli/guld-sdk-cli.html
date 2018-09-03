@@ -126,26 +126,36 @@
                 <div class="col-12">
                     <div class="room">
                         <h1>guld-sdk-cli</h1>
-<p>Software developer kit for guld apps.</p>
-<h3>Example Output</h3>
+<p><a href="https://bitbucket.org/guld/tech-js-node_modules-guld-sdk-cli"><img src="https://img.shields.io/badge/source-bitbucket-blue.svg" alt="source"></a> <a href="https://bitbucket.org/guld/tech-js-node_modules-guld-sdk-cli/issues"><img src="https://img.shields.io/badge/issues-bitbucket-yellow.svg" alt="issues"></a> <a href="https://guld.tech/cli/guld-sdk-cli.html"><img src="https://img.shields.io/badge/docs-guld.tech-green.svg" alt="documentation"></a></p>
+<p><a href="https://www.npmjs.com/package/guld-sdk-cli"><img src="https://img.shields.io/npm/v/guld-sdk-cli.svg" alt="node package manager"></a> <a href="https://travis-ci.org/guldcoin/tech-js-node_modules-guld-sdk-cli?branch=guld"><img src="https://travis-ci.org/guldcoin/tech-js-node_modules-guld-sdk-cli.svg" alt="travis-ci"></a> <a href="https://lgtm.com/projects/b/guld/tech-js-node_modules-guld-sdk-cli/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/b/guld/tech-js-node_modules-guld-sdk-cli.svg?logo=lgtm&amp;logoWidth=18" alt="lgtm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-guld-sdk-cli"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-guld-sdk-cli/status.svg" alt="david-dm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-guld-sdk-cli?type=dev"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-guld-sdk-cli/dev-status.svg" alt="david-dm"></a></p>
+<p>Software Developer Kit for guld JS packages.</p>
 <h3>Install</h3>
-<pre><code>npm i -g guld-sdk-cli
+<h5>Node</h5>
+<pre><code class="language-sh">npm i -g guld-sdk-cli
 </code></pre>
 <h3>Usage</h3>
 <h5>CLI</h5>
-<pre><code>  Usage: guld-sdk [options] [command]
+<pre><code class="language-sh">guld-sdk --help
 
-  Software developer kit for guld apps.
+  Usage: guld-sdk [options] [command]
+
+  Software Developer Kit for guld JS packages.
 
   Options:
 
     -V, --version           output the version number
+    -u --user &lt;name&gt;        The user name to run as.
     -h, --help              output usage information
 
   Commands:
 
-    package|pkg [location]  Initialize or patch a nodejs package.json file.
+    init [options]          Create or update a JS package, including package.json, travis, webpack, and more config files.
+    readme [package-name]   Guld SDK readme generator. Uses package.json, .travis.yml, and pre-existing README.md files to generate guld-style README.md files like this project's
+    version [package-name]  Guld SDK semantic version manager for packages.
+
 </code></pre>
+<h3>License</h3>
+<p>MIT Copyright isysd</p>
 
 
                     </div>
