@@ -125,10 +125,18 @@
             <div class="row row-offcanvas row-offcanvas-left">
                 <div class="col-12">
                     <div class="room">
-                        <p><a href="https://travis-ci.org/nfer/git-config-ini"><img src="https://travis-ci.org/nfer/git-config-ini.svg?branch=master" alt="Build Status"></a>
-<a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="JavaScript Style Guide"></a></p>
-<p>GIT config ini format parser and serializer for node.</p>
-<h2>Usage</h2>
+                        <h1>guld-git-config-ini</h1>
+<p><a href="https://bitbucket.org/guld/tech-js-node_modules-guld-git-config-ini"><img src="https://img.shields.io/badge/source-bitbucket-blue.svg" alt="source"></a> <a href="https://bitbucket.org/guld/tech-js-node_modules-guld-git-config-ini/issues"><img src="https://img.shields.io/badge/issues-bitbucket-yellow.svg" alt="issues"></a> <a href="https://guld.tech/lib/guld-git-config-ini.html"><img src="https://img.shields.io/badge/docs-guld.tech-green.svg" alt="documentation"></a></p>
+<p><a href="https://www.npmjs.com/package/guld-git-config-ini"><img src="https://img.shields.io/npm/v/guld-git-config-ini.svg" alt="node package manager"></a> <a href="https://travis-ci.org/guldcoin/tech-js-node_modules-guld-git-config-ini?branch=guld"><img src="https://travis-ci.org/guldcoin/tech-js-node_modules-guld-git-config-ini.svg" alt="travis-ci"></a> <a href="https://lgtm.com/projects/b/guld/tech-js-node_modules-guld-git-config-ini/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/b/guld/tech-js-node_modules-guld-git-config-ini.svg?logo=lgtm&amp;logoWidth=18" alt="lgtm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-guld-git-config-ini"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-guld-git-config-ini/status.svg" alt="david-dm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-guld-git-config-ini?type=dev"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-guld-git-config-ini/dev-status.svg" alt="david-dm"></a></p>
+<p>A git config ini encoder/decoder for guld</p>
+<h3>Install</h3>
+<h5>Node</h5>
+<pre><code class="language-sh">npm i guld-git-config-ini
+</code></pre>
+<h5>Browser</h5>
+<pre><code class="language-sh">curl https///bitbucket.org/guld/tech-js-node_modules-guld-git-config-ini/raw/guld/ini.min.js -o ini.min.js
+</code></pre>
+<h3>Usage</h3>
 <p>Consider an git config ini-file <code>.git/config</code> that looks like this:</p>
 <pre><code>[core]
     repositoryformatversion = 0
@@ -155,7 +163,7 @@ config.user.email = 'nfer@nferzhuang.com'
 
 fs.writeFileSync('.git/config', ini.stringify(config))
 </code></pre>
-<h3>Browser</h3>
+<h4>Browser</h4>
 <p>This script has been bundled for browser use and is available as global var <code>gitConfigIni</code>.</p>
 <pre><code>&lt;html&gt;
   &lt;body&gt;
@@ -166,25 +174,17 @@ fs.writeFileSync('.git/config', ini.stringify(config))
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<h2>API</h2>
-<h3>decode(inistring)</h3>
+<h3>API</h3>
+<h4>decode(inistring)</h4>
 <p>Decode the ini-style formatted <code>inistring</code> into a nested object.</p>
-<h3>parse(inistring)</h3>
+<h4>parse(inistring)</h4>
 <p>Alias for <code>decode(inistring)</code></p>
-<h3>encode(object)</h3>
+<h4>encode(object)</h4>
 <p>Encode the object <code>object</code> into an ini-style formatted string.</p>
-<h3>stringify(object)</h3>
+<h4>stringify(object)</h4>
 <p>Alias for <code>encode(object)</code></p>
-<h3>safe(val)</h3>
-<p>Escapes the string <code>val</code> such that it is safe to be used as a key or
-value in an ini-file. Basically escapes quotes. For example</p>
-<pre><code>ini.safe('&quot;unsafe string&quot;')
-</code></pre>
-<p>would result in</p>
-<pre><code>&quot;\&quot;unsafe string\&quot;&quot;
-</code></pre>
-<h3>unsafe(val)</h3>
-<p>Unescapes the string <code>val</code></p>
+<h3>License</h3>
+<p>MIT Copyright Nfer Zhuang <a href="mailto:nfer.zhuang@gmail.com">nfer.zhuang@gmail.com</a></p>
 
 
                     </div>
