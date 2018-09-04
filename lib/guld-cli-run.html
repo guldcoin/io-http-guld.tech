@@ -132,11 +132,11 @@
 <p>A contextual runner for commander based CLIs.</p>
 <h3>Install</h3>
 <h3>Usage</h3>
-<p>Run with the commander program, a default handler function and a success handler function. The default handler is run if the command is executed with no arguments. Otherwise, the success handler is run.</p>
-<pre><code>runCLI(program, program.help, program.parse)
+<p>Run with the commander program, a default handler function and a success handler function. The default handler is run if the command is executed with no arguments. Otherwise, the success handler is run. Bind <code>runCLI</code> to the program for best results.</p>
+<pre><code>runCLI.bind(program)(program.help, program.parse)
 </code></pre>
 <h5>node</h5>
-<pre><code class="language-javascript">require('guld-cli-run')
+<pre><code class="language-javascript">var runCLI = require('guld-cli-run')
 </code></pre>
 <h3>License</h3>
 <p>MIT Copyright guld</p>
