@@ -127,24 +127,15 @@
                 <div class="col-12">
                     <div class="room">
                         <h1>guld-git-config</h1>
+<p><a href="https://bitbucket.org/guld/tech-js-node_modules-guld-git-config"><img src="https://img.shields.io/badge/source-bitbucket-blue.svg" alt="source"></a> <a href="https://bitbucket.org/guld/tech-js-node_modules-guld-git-config/issues"><img src="https://img.shields.io/badge/issues-bitbucket-yellow.svg" alt="issues"></a> <a href="https://guld.tech/lib/guld-git-config.html"><img src="https://img.shields.io/badge/docs-guld.tech-green.svg" alt="documentation"></a></p>
+<p><a href="https://www.npmjs.com/package/guld-git-config"><img src="https://img.shields.io/npm/v/guld-git-config.svg" alt="node package manager"></a> <a href="https://travis-ci.org/guldcoin/tech-js-node_modules-guld-git-config?branch=guld"><img src="https://travis-ci.org/guldcoin/tech-js-node_modules-guld-git-config.svg" alt="travis-ci"></a> <a href="https://lgtm.com/projects/b/guld/tech-js-node_modules-guld-git-config/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/b/guld/tech-js-node_modules-guld-git-config.svg?logo=lgtm&amp;logoWidth=18" alt="lgtm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-guld-git-config"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-guld-git-config/status.svg" alt="david-dm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-guld-git-config?type=dev"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-guld-git-config/dev-status.svg" alt="david-dm"></a></p>
 <p>Guld configuration helper manages git config files.</p>
-<h3>Example Output</h3>
-<pre><code>$ guld-git-config list
-user.username=isysd
-user.signingkey=C7EA0E59D0660BF6848614B6441BDDD420F44729
-commit.gpgsign=true
-alias.pushall=!git remote | xargs -L1 -I R git push R $2
-host.github=isysd
-host.bitbucket=isysd
-host.gitlab=isysd
-core.testing4=true
-core.repositoryformatversion=0
-core.filemode=true
-core.bare=false
-core.logallrefupdates=true
-</code></pre>
 <h3>Install</h3>
-<pre><code>npm i guld-git-config
+<h5>Node</h5>
+<pre><code class="language-sh">npm i guld-git-config
+</code></pre>
+<h5>Browser</h5>
+<pre><code class="language-sh">curl https///bitbucket.org/guld/tech-js-node_modules-guld-git-config/raw/guld/guld-git-config.min.js -o guld-git-config.min.js
 </code></pre>
 <h3>Usage</h3>
 <pre><code>// async
@@ -154,11 +145,9 @@ cfg.core.test = true
 setConfig('cfg.core.test', true)
 var cfg = await getConfig('local') // {core: {test: true}}
 </code></pre>
-<h5>Node</h5>
-<pre><code>const { guldName, getConfig, setConfig, unsetConfig } = require('guld-git-config')
-</code></pre>
-<h5>CLI</h5>
-<p>See <a href="https://github.com/isysd/tech-js-node_modules-guld-git-config-cli">guld-git-config-cli</a>.</p>
+<h2></h2>
+<h3>License</h3>
+<p>MIT Copyright isysd</p>
 
 
                     </div>
