@@ -627,6 +627,12 @@ section {
     height: var(--msg-content-height);
 }
 
+.dropdown-menu{
+      max-height: 200px;
+      overflow-y: auto;
+   }
+}
+
 /*Animation Names*/
 
 #msg1 {
@@ -943,3 +949,4 @@ section {
         font-size: 0.8em;
         top: 72px;
 }
+
