@@ -84,6 +84,7 @@
 <a class="dropdown-item" href="../lib/guld-git-path.html">guld git path</a>
 <a class="dropdown-item" href="../lib/guld-git-remote.html">guld git remote</a>
 <a class="dropdown-item" href="../lib/guld-git.html">guld git</a>
+<a class="dropdown-item" href="../lib/guld-ledger-cache.html">guld ledger cache</a>
 <a class="dropdown-item" href="../lib/guld-ledger-grant.html">guld ledger grant</a>
 <a class="dropdown-item" href="../lib/guld-ledger-register.html">guld ledger register</a>
 <a class="dropdown-item" href="../lib/guld-ledger-transfer.html">guld ledger transfer</a>
@@ -121,13 +122,26 @@
                 <div class="col-12">
                     <div class="room">
                         <h1>guld-ledger-cli</h1>
-<p>Guld ledger commands.</p>
+<p>Guld ledger command line interface.</p>
 <h3>Install</h3>
 <pre><code>npm i -g guld-ledger-cli
 </code></pre>
 <h3>Usage</h3>
 <h5>CLI</h5>
-<pre><code></code></pre>
+<pre><code>  Usage: guld-ledger [options] [command]
+
+  Guld ledger
+
+  Options:
+
+    -V, --version     output the version number
+    -u --user &lt;name&gt;  The user name to run as.
+    -h, --help        output usage information
+
+  Commands:
+
+    cache [path]      Cache all ledger files found (recursively) in the given path or $HOME/ledger.
+</code></pre>
 
 
                     </div>
