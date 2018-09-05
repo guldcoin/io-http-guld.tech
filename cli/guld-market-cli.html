@@ -121,42 +121,35 @@
             <div class="row row-offcanvas row-offcanvas-left">
                 <div class="col-12">
                     <div class="room">
-                        <h1>guld-git-cli</h1>
-<p>Guld standardized CLI for git.</p>
-<h3>Example Output</h3>
+                        <h1>guld-market-cli</h1>
+<p><a href="https://bitbucket.org/guld/tech-js-node_modules-guld-market-cli"><img src="https://img.shields.io/badge/source-bitbucket-blue.svg" alt="source"></a> <a href="https://bitbucket.org/guld/tech-js-node_modules-guld-market-cli/issues"><img src="https://img.shields.io/badge/issues-bitbucket-yellow.svg" alt="issues"></a> <a href="https://guld.tech/cli/guld-market-cli.html"><img src="https://img.shields.io/badge/docs-guld.tech-green.svg" alt="documentation"></a></p>
+<p><a href="https://www.npmjs.com/package/guld-market-cli"><img src="https://img.shields.io/npm/v/guld-market-cli.svg" alt="node package manager"></a> <a href="https://travis-ci.org/guldcoin/tech-js-node_modules-guld-market-cli?branch=guld"><img src="https://travis-ci.org/guldcoin/tech-js-node_modules-guld-market-cli.svg" alt="travis-ci"></a> <a href="https://lgtm.com/projects/b/guld/tech-js-node_modules-guld-market-cli/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/b/guld/tech-js-node_modules-guld-market-cli.svg?logo=lgtm&amp;logoWidth=18" alt="lgtm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-guld-market-cli"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-guld-market-cli/status.svg" alt="david-dm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-guld-market-cli?type=dev"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-guld-market-cli/dev-status.svg" alt="david-dm"></a></p>
+<p>Guld market command line interface.</p>
 <h3>Install</h3>
-<pre><code>npm i -g guld-git-cli
+<h5>Node</h5>
+<pre><code class="language-sh">npm i -g guld-market-cli
 </code></pre>
 <h3>Usage</h3>
 <h5>CLI</h5>
-<pre><code>  Usage: guld-git [options] [command]
+<pre><code class="language-sh">guld-market --help
 
-  Guld standardized CLI for git.
+  Usage: guld-market [options] [command]
+
+  Guld market command line interface.
 
   Options:
 
-    -V, --version                   output the version number
-    -C --cwd &lt;dir&gt;                  Set current working directory before running.
-    -h, --help                      output usage information
+    -V, --version   output the version number
+    -h, --help      output usage information
 
   Commands:
 
-    path                            Blocktree path resolution tools.
-    config                          Configuration manager for git config files.
-    host                            Configuration manager for git hosts.
-    remote                          Manage git remotes the guld way.
-    add [options] [file]            Add files to the git working directory.
-    init                            Create an empty Git repository or reinitialize an existing one.
-    clone [url] [directory]         Clone a repository into a new directory.
-    remove|delete [options] &lt;file&gt;  Remove files from the git working directory.
-    log [options] [fromRef]         List commits from the given ref backwards.
-    status [file]                   Get the status of a file in the working directory.
-    commit [message]                Stores the current contents of the index in a new commit along with a log message from the user describing the changes.
-    fetch [remote] [branch]         Download objects and refs from another repository.
-    push [remote] [branch]          Update remote refs along with associated objects.
-    pull [remote] [branch]          Fetch from and integrate with another repository or a local branch.
-    help [cmd]                      display help for [cmd]
+    price [asset]   Get the price of the given asset (Default: GULD)
+    update [asset]  Update the price of the given asset (Default: all)
+
 </code></pre>
+<h3>License</h3>
+<p>MIT Copyright isysd</p>
 
 
                     </div>
