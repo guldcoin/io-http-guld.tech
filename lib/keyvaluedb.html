@@ -119,13 +119,13 @@
                 <div class="col-12">
                     <div class="room">
                         <h1>keyvaluedb</h1>
-<p><a href="https://www.npmjs.com/package/keyvaluedb"><img src="https://img.shields.io/npm/v/keyvaluedb.svg" alt="npm"></a> <a href="https://travis-ci.org/isysd/keyvaluedb"><img src="https://travis-ci.org/isysd/keyvaluedb.svg?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/github/isysd/keyvaluedb?branch=master"><img src="https://coveralls.io/repos/github/isysd/keyvaluedb/badge.svg?branch=master" alt="Coverage Status"></a></p>
-<p>Middleware for key value data stores. Supports a temporary memory database, and persistent Chrome Storage.</p>
-<h3>Installation</h3>
-<p>Please use npm to install.</p>
-<p><code>npm i keyvaluedb</code></p>
-<h5>Browser</h5>
-<p>To use in the browser, please use browserify or webpack to include and build keyvaluedb. No standalone browser library is currently implemented, but can be if requested.</p>
+<p><a href="https://bitbucket.org/guld/tech-js-node_modules-keyvaluedb"><img src="https://img.shields.io/badge/source-bitbucket-blue.svg" alt="source"></a> <a href="https://bitbucket.org/guld/tech-js-node_modules-keyvaluedb/issues"><img src="https://img.shields.io/badge/issues-bitbucket-yellow.svg" alt="issues"></a> <a href="https://guld.tech/lib/keyvaluedb.html"><img src="https://img.shields.io/badge/docs-guld.tech-green.svg" alt="documentation"></a></p>
+<p><a href="https://www.npmjs.com/package/keyvaluedb"><img src="https://img.shields.io/npm/v/keyvaluedb.svg" alt="node package manager"></a> <a href="https://travis-ci.org/guldcoin/tech-js-node_modules-keyvaluedb?branch=guld"><img src="https://travis-ci.org/guldcoin/tech-js-node_modules-keyvaluedb.svg" alt="travis-ci"></a> <a href="https://lgtm.com/projects/b/guld/tech-js-node_modules-keyvaluedb/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/b/guld/tech-js-node_modules-keyvaluedb.svg?logo=lgtm&amp;logoWidth=18" alt="lgtm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-keyvaluedb"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-keyvaluedb/status.svg" alt="david-dm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-keyvaluedb?type=dev"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-keyvaluedb/dev-status.svg" alt="david-dm"></a></p>
+<p>Key Value database middleware for node and the browser.</p>
+<h3>Install</h3>
+<h5>Node</h5>
+<pre><code class="language-sh">npm i keyvaluedb
+</code></pre>
 <h3>Usage</h3>
 <p>Either a specific database class can be initialized, or the <code>defaultDB</code> function can be used to attempt to find a DB that works in your runtime environment.</p>
 <pre><code>const { defaultDB, memoryDB, chromeStorageDB } = require('keyvaluedb')
@@ -144,6 +144,8 @@ class MyDB extends MemoryDB {}
 let mydb = new MyDB()
 mydb instanceof MemoryDB // true
 </code></pre>
+<h3>License</h3>
+<p>MIT Copyright isysd <a href="mailto:public@iramiller.com">public@iramiller.com</a></p>
 
 
                     </div>
