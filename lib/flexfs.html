@@ -145,8 +145,45 @@ class MyFS extends ExtraFS {}
 let myfs = new MyFS()
 myfs instanceof ExtraFS // true
 </code></pre>
-<h3>Promise API</h3>
+<h4>Promise API</h4>
 <p>Every function is either natively written for Promises or is converted using <a href="https://github.com/sindresorhus/pify">pify</a>.</p>
+<h4>Mixins</h4>
+<h5>extraFS</h5>
+<p>The following functions were implemented as extras, available through ExtraFS.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mkdirp</td>
+<td>Make a directory and any parent directories which didn’t exists.</td>
+</tr>
+<tr>
+<td>cpr</td>
+<td>Copy a directory recursively.</td>
+</tr>
+</tbody>
+</table>
+<h5>supplimentFS</h5>
+<p>The following functions are alternate implementation of core fs functionality. They are useful for incomplete or new fs implementations.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>copyFile</td>
+<td>Copy a file from old location to new. (standard)</td>
+</tr>
+</tbody>
+</table>
 <h3>License</h3>
 <p>MIT Copyright isysd <a href="mailto:public@iramiller.com">public@iramiller.com</a></p>
 
