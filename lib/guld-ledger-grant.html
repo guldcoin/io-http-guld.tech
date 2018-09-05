@@ -121,24 +121,7 @@
             <div class="row row-offcanvas row-offcanvas-left">
                 <div class="col-12">
                     <div class="room">
-                        <h1>guld-fs</h1>
-<p>Guld file system abstraction module.</p>
-<h3>Install</h3>
-<pre><code>npm i guld-fs
-</code></pre>
-<h3>Usage</h3>
-<pre><code>
-// must be in an async function.
-var fs = await getFS(pify=true) // pify=false to not pify the returned fs
-// Now use fs with optional promises and extra functions.
-fs.mkdirp('/long/non/existing/path/chain')
-fs.cpr('/long/non/existing/path/chain', '/tmp/')
-fs.rimraf('/tmp/')
-</code></pre>
-<h5>Node</h5>
-<pre><code>const { getFS } = require('guld-fs')
-</code></pre>
-
+                        
 
                     </div>
                 </div>

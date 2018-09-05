@@ -122,13 +122,13 @@
                 <div class="col-12">
                     <div class="room">
                         <h1>flexfs</h1>
-<p><a href="https://www.npmjs.com/package/flexfs"><img src="https://img.shields.io/npm/v/flexfs.svg" alt="npm"></a> <a href="https://travis-ci.org/isysd/flexfs"><img src="https://travis-ci.org/isysd/flexfs.svg?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/github/isysd/flexfs?branch=master"><img src="https://coveralls.io/repos/github/isysd/flexfs/badge.svg?branch=master" alt="Coverage Status"></a></p>
-<p>Flexible and easy to use mixins for node’s fs or subclasses. Works in both the browser and nodeJS.</p>
-<h3>Installation</h3>
-<p>Please use npm to install.</p>
-<p><code>npm i flexfs</code></p>
-<h5>Browser</h5>
-<p>To use in the browser, please use browserify or webpack to include and build flexfs. Alternately, use the standalone package in <code>./dist/flexfs.js</code>.</p>
+<p><a href="https://bitbucket.org/guld/tech-js-node_modules-flexfs"><img src="https://img.shields.io/badge/source-bitbucket-blue.svg" alt="source"></a> <a href="https://bitbucket.org/guld/tech-js-node_modules-flexfs/issues"><img src="https://img.shields.io/badge/issues-bitbucket-yellow.svg" alt="issues"></a> <a href="https://guld.tech/lib/flexfs.html"><img src="https://img.shields.io/badge/docs-guld.tech-green.svg" alt="documentation"></a></p>
+<p><a href="https://www.npmjs.com/package/flexfs"><img src="https://img.shields.io/npm/v/flexfs.svg" alt="node package manager"></a> <a href="https://travis-ci.org/guldcoin/tech-js-node_modules-flexfs?branch=guld"><img src="https://travis-ci.org/guldcoin/tech-js-node_modules-flexfs.svg" alt="travis-ci"></a> <a href="https://lgtm.com/projects/b/guld/tech-js-node_modules-flexfs/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/b/guld/tech-js-node_modules-flexfs.svg?logo=lgtm&amp;logoWidth=18" alt="lgtm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-flexfs"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-flexfs/status.svg" alt="david-dm"></a> <a href="https://david-dm.org/guldcoin/tech-js-node_modules-flexfs?type=dev"><img src="https://david-dm.org/guldcoin/tech-js-node_modules-flexfs/dev-status.svg" alt="david-dm"></a></p>
+<p>Flexible and easy to use mixins for node’s <code>fs</code> or subclasses, with Promises and value add functions.</p>
+<h3>Install</h3>
+<h5>Node</h5>
+<pre><code class="language-sh">npm i flexfs
+</code></pre>
 <h3>Usage</h3>
 <p>To use flexfs, first you must initialize an instance of your favorite <code>fs</code> library. For example, node’s native <a href="https://nodejs.org/api/fs.html">fs</a> and <a href="https://github.com/jvilk/BrowserFS">BrowserFS</a> are used in tests.</p>
 <pre><code>const { supplimentFS, extraFS } = require('flexfs')
@@ -138,7 +138,7 @@ fs.mkdirp = extraFS.mkdirp
 fs.cpr = extraFS.cpr
 // use fs.mkdirp and fs.cpr
 </code></pre>
-<p>To use as an es6 class mixin, first use <a href="https://bitbucket.org/isysd/object-to-class">object-to-class</a>.</p>
+<p>To use as an es6 class mixin, first use <a href="https://github.com/isysd/object-to-class">object-to-class</a>.</p>
 <pre><code>const o2c = require('object-to-class')
 const ExtraFS = o2c(extraFS, 'ExtraFS')
 class MyFS extends ExtraFS {}
@@ -147,51 +147,8 @@ myfs instanceof ExtraFS // true
 </code></pre>
 <h3>Promise API</h3>
 <p>Every function is either natively written for Promises or is converted using <a href="https://github.com/sindresorhus/pify">pify</a>.</p>
-<h3>Mixins</h3>
-<h5>extraFS</h5>
-<p>The following functions were implemented as extras, available through ExtraFS.</p>
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mkdirp</td>
-<td>Make a directory and any parent directories which didn’t exists.</td>
-</tr>
-<tr>
-<td>cpr</td>
-<td>Copy a directory recursively.</td>
-</tr>
-<tr>
-<td>mvr</td>
-<td>Move a directory recursively.</td>
-</tr>
-<tr>
-<td>rimraf</td>
-<td>Remove a directory recursively.</td>
-</tr>
-</tbody>
-</table>
-<h5>supplimentFS</h5>
-<p>The following functions are alternate implementation of core fs functionality. They are useful for incomplete or new fs implementations.</p>
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>copyFile</td>
-<td>Copy a file from old location to new. (standard)</td>
-</tr>
-</tbody>
-</table>
+<h3>License</h3>
+<p>MIT Copyright isysd <a href="mailto:public@iramiller.com">public@iramiller.com</a></p>
 
 
                     </div>
